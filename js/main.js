@@ -361,6 +361,144 @@ document.addEventListener("DOMContentLoaded", () => {
   })();
 
   /* ------------------------------
+     SERVICES WHY TABS
+  ------------------------------ */
+  (() => {
+    const tabsShell = document.querySelector(".services-tabs-shell");
+    const tabRow = tabsShell?.querySelector(".services-why-tab-row");
+    const tabButtons = Array.from(tabsShell?.querySelectorAll(".services-why-tab[data-why-target]") || []);
+    const panelShell = tabsShell?.querySelector(".services-why-panel-shell[role='tabpanel']");
+    const panelContent = tabsShell?.querySelector("[data-why-panel-content]");
+    const SWAP_DELAY_MS = 150;
+    let swapTimer = null;
+
+    if (!tabsShell || !tabRow || !tabButtons.length || !panelShell || !panelContent) return;
+
+    const templateMap = new Map(
+      tabButtons.map((button) => [
+        button.dataset.whyTarget,
+        tabsShell.querySelector(`#why-template-${button.dataset.whyTarget}`),
+      ])
+    );
+
+    const syncWhyBridge = (button) => {
+      if (!button) return;
+      const left = button.offsetLeft - tabRow.scrollLeft;
+      tabsShell.style.setProperty("--why-tab-bridge-left", `${Math.max(0, left)}px`);
+      tabsShell.style.setProperty("--why-tab-bridge-width", `${button.offsetWidth}px`);
+    };
+
+    const setActiveTabState = (activeButton) => {
+      tabButtons.forEach((button) => {
+        const isActive = button === activeButton;
+        button.classList.toggle("is-active", isActive);
+        button.setAttribute("aria-selected", String(isActive));
+        button.tabIndex = isActive ? 0 : -1;
+      });
+
+      if (activeButton) {
+        panelShell.setAttribute("aria-labelledby", activeButton.id);
+      }
+    };
+
+    const renderWhyContent = (key) => {
+      const template = templateMap.get(key);
+      if (!template) return false;
+
+      panelContent.replaceChildren(template.content.cloneNode(true));
+      return true;
+    };
+
+    const activateWhyTab = (button, { focus = false, immediate = false } = {}) => {
+      if (!button) return;
+
+      const key = button.dataset.whyTarget;
+      if (!key || !templateMap.has(key)) return;
+
+      if (swapTimer) {
+        window.clearTimeout(swapTimer);
+        swapTimer = null;
+      }
+
+      setActiveTabState(button);
+
+      button.scrollIntoView({
+        behavior: immediate ? "auto" : "smooth",
+        block: "nearest",
+        inline: "nearest",
+      });
+
+      syncWhyBridge(button);
+
+      if (focus) {
+        button.focus();
+      }
+
+      if (immediate) {
+        renderWhyContent(key);
+        panelContent.classList.add("is-visible");
+        return;
+      }
+
+      panelContent.classList.remove("is-visible");
+
+      swapTimer = window.setTimeout(() => {
+        renderWhyContent(key);
+        window.requestAnimationFrame(() => {
+          panelContent.classList.add("is-visible");
+        });
+        swapTimer = null;
+      }, SWAP_DELAY_MS);
+    };
+
+    const getNextWhyTab = (currentButton, direction) => {
+      const currentIndex = tabButtons.indexOf(currentButton);
+      if (currentIndex < 0) return tabButtons[0];
+
+      const nextIndex = (currentIndex + direction + tabButtons.length) % tabButtons.length;
+      return tabButtons[nextIndex];
+    };
+
+    const initialActiveButton =
+      tabButtons.find((button) => button.classList.contains("is-active")) || tabButtons[0];
+
+    activateWhyTab(initialActiveButton, { immediate: true });
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => activateWhyTab(button));
+
+      button.addEventListener("keydown", (event) => {
+        let nextButton = null;
+
+        if (event.key === "ArrowRight" || event.key === "ArrowDown") {
+          nextButton = getNextWhyTab(button, 1);
+        } else if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
+          nextButton = getNextWhyTab(button, -1);
+        } else if (event.key === "Home") {
+          nextButton = tabButtons[0];
+        } else if (event.key === "End") {
+          nextButton = tabButtons[tabButtons.length - 1];
+        }
+
+        if (!nextButton) return;
+
+        event.preventDefault();
+        activateWhyTab(nextButton, { focus: true });
+      });
+    });
+
+    window.addEventListener("resize", () => {
+      const activeButton = tabButtons.find((button) => button.classList.contains("is-active"));
+      syncWhyBridge(activeButton);
+    });
+
+    tabRow.addEventListener("scroll", () => {
+      const activeButton = tabButtons.find((button) => button.classList.contains("is-active"));
+      syncWhyBridge(activeButton);
+    }, { passive: true });
+  })();
+
+  /* ------------------------------
      GALLERY WHEEL
   ------------------------------ */
   (() => {
