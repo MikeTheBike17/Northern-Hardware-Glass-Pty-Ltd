@@ -9436,6 +9436,33 @@ body.products-page.aluminium-page .laminated-hero-bg {
     url("images/aluminium-background.jpg") center/cover no-repeat;
 }
 
+body.products-page.double-glaze-page .laminated-hero-bg {
+  background:
+    linear-gradient(135deg, rgba(19, 47, 90, 0.18), rgba(7, 13, 22, 0.58)),
+    url("images/DoubleGlaze-Background.jpg") center/cover no-repeat;
+}
+
+body.products-page.product-detail-page .detail-inline-media {
+  margin-top: 1.15rem;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid rgba(160, 182, 210, 0.26);
+  background: rgba(255, 255, 255, 0.52);
+}
+
+body.products-page.product-detail-page .detail-inline-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+body.products-page.product-detail-page .detail-inline-media figcaption {
+  padding: 0.95rem 1rem 1rem;
+  color: #5d6d84;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
 body.products-page.product-detail-page .special-detail-inline-media {
   margin-top: 1.15rem;
   border-radius: 24px;
