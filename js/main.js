@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.getElementById("navToggle");
   const siteHeader = document.querySelector(".site-header");
   const siteMenu = document.getElementById("siteMenu");
+  const isServicesPage = document.body.classList.contains("services-page");
   const useFlatDropdownNav = siteMenu?.dataset.flatNav === "true";
   const HEADER_MENU_TRANSITION_MS = 280;
   let headerMenuCloseTimer = null;
@@ -43,6 +44,10 @@ document.addEventListener("DOMContentLoaded", () => {
       window.clearTimeout(headerMenuCloseTimer);
       headerMenuCloseTimer = null;
     }
+    if (isServicesPage) {
+      document.body.classList.remove("nav-open");
+      siteHeader.classList.remove("nav-open");
+    }
     siteHeader.classList.remove("menu-open");
     siteHeader.classList.add("menu-closing");
     headerMenuCloseTimer = window.setTimeout(() => {
@@ -60,6 +65,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     siteHeader.classList.remove("menu-closing");
     siteHeader.classList.add("menu-open");
+    if (isServicesPage) {
+      document.body.classList.add("nav-open");
+      siteHeader.classList.add("nav-open");
+    }
     navToggle.setAttribute("aria-expanded", "true");
   }
 
@@ -276,6 +285,148 @@ document.addEventListener("DOMContentLoaded", () => {
 
     revealItems.forEach((item) => revealObserver.observe(item));
   }
+
+  /* ------------------------------
+     SERVICES PANEL SCROLL LIFT
+  ------------------------------ */
+  (() => {
+    if (!isServicesPage || prefersReducedMotion.matches) return;
+
+    const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+
+    const getMaxLift = () => {
+      if (window.innerWidth <= HERO_MOBILE_BREAKPOINT) return 28;
+      if (window.innerWidth <= 1120) return 52;
+      return 84;
+    };
+
+    const initSectionScrollLift = (sectionSelector, panelSelector, cssVarName) => {
+      const section = document.querySelector(sectionSelector);
+      const panel = section?.querySelector(panelSelector);
+
+      if (!section || !panel) return;
+
+      let liftFrame = null;
+      let currentLift = 0;
+      let targetLift = 0;
+
+      const measureLift = () => {
+        const rect = section.getBoundingClientRect();
+        const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+        const start = viewportHeight * 0.88;
+        const end = -rect.height * 0.22;
+        const progress = clamp((start - rect.top) / (start - end), 0, 1);
+
+        targetLift = -progress * getMaxLift();
+      };
+
+      const renderLift = () => {
+        const delta = targetLift - currentLift;
+
+        if (Math.abs(delta) < 0.12) {
+          currentLift = targetLift;
+          panel.style.setProperty(cssVarName, `${currentLift.toFixed(2)}px`);
+          liftFrame = null;
+          return;
+        }
+
+        currentLift += delta * 0.14;
+        panel.style.setProperty(cssVarName, `${currentLift.toFixed(2)}px`);
+        liftFrame = window.requestAnimationFrame(renderLift);
+      };
+
+      const syncLift = () => {
+        measureLift();
+
+        if (liftFrame === null) {
+          liftFrame = window.requestAnimationFrame(renderLift);
+        }
+      };
+
+      syncLift();
+      window.addEventListener("scroll", syncLift, { passive: true });
+      window.addEventListener("resize", syncLift);
+    };
+
+    initSectionScrollLift(".services-intro-section", ".services-intro-panel", "--services-intro-scroll-shift");
+    initSectionScrollLift(".services-processing-section", ".services-edge-panel", "--services-processing-scroll-shift");
+  })();
+
+  /* ------------------------------
+     EDGE PROFILE IMAGE EXPAND
+  ------------------------------ */
+  (() => {
+    const edgeProfileImages = Array.from(document.querySelectorAll(".edge-profile-img"));
+
+    if (!edgeProfileImages.length) return;
+
+    const zoomBackdrop = document.createElement("div");
+    zoomBackdrop.className = "edge-profile-zoom-backdrop";
+    zoomBackdrop.hidden = true;
+
+    const zoomFrame = document.createElement("div");
+    zoomFrame.className = "edge-profile-zoom-frame";
+
+    const zoomImage = document.createElement("img");
+    zoomImage.className = "edge-profile-zoom-image";
+    zoomImage.alt = "";
+
+    zoomFrame.appendChild(zoomImage);
+    zoomBackdrop.appendChild(zoomFrame);
+    document.body.appendChild(zoomBackdrop);
+
+    const closeZoom = () => {
+      zoomBackdrop.classList.remove("is-open");
+      window.setTimeout(() => {
+        if (!zoomBackdrop.classList.contains("is-open")) {
+          zoomBackdrop.hidden = true;
+          zoomImage.removeAttribute("src");
+          zoomImage.alt = "";
+          zoomImage.style.width = "";
+          zoomImage.style.height = "";
+        }
+      }, 220);
+    };
+
+    const openZoom = (image) => {
+      const rect = image.getBoundingClientRect();
+
+      zoomImage.src = image.currentSrc || image.src;
+      zoomImage.alt = image.alt;
+      zoomImage.style.width = `${rect.width * 2}px`;
+      zoomImage.style.height = `${rect.height * 2}px`;
+      zoomBackdrop.hidden = false;
+
+      window.requestAnimationFrame(() => {
+        zoomBackdrop.classList.add("is-open");
+      });
+    };
+
+    edgeProfileImages.forEach((image) => {
+      image.tabIndex = 0;
+      image.setAttribute("role", "button");
+      image.setAttribute("aria-label", `${image.alt}. Click to expand.`);
+
+      image.addEventListener("click", () => openZoom(image));
+      image.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter" && event.key !== " ") return;
+        event.preventDefault();
+        openZoom(image);
+      });
+    });
+
+    zoomBackdrop.addEventListener("click", (event) => {
+      if (event.target === zoomBackdrop || event.target === zoomImage) {
+        closeZoom();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && zoomBackdrop.classList.contains("is-open")) {
+        closeZoom();
+      }
+    });
+  })();
 
   /* ------------------------------
      HOMEPAGE SERVICES ACCORDION
