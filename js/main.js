@@ -44,10 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
       window.clearTimeout(headerMenuCloseTimer);
       headerMenuCloseTimer = null;
     }
-    if (isServicesPage) {
-      document.body.classList.remove("nav-open");
-      siteHeader.classList.remove("nav-open");
-    }
+    document.body.classList.remove("nav-open");
+    siteHeader.classList.remove("nav-open");
     siteHeader.classList.remove("menu-open");
     siteHeader.classList.add("menu-closing");
     headerMenuCloseTimer = window.setTimeout(() => {
@@ -65,10 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     siteHeader.classList.remove("menu-closing");
     siteHeader.classList.add("menu-open");
-    if (isServicesPage) {
-      document.body.classList.add("nav-open");
-      siteHeader.classList.add("nav-open");
-    }
+    document.body.classList.add("nav-open");
+    siteHeader.classList.add("nav-open");
     navToggle.setAttribute("aria-expanded", "true");
   }
 

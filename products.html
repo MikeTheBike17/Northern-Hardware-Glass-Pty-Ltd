@@ -5,419 +5,345 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Northern Hardware & Glass (Pty) Ltd - Exclusive Range</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
   <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"/>
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <script src="js/main.js" defer></script>
 </head>
-<body>
-  <header class="site-header">
-    <!-- top bar-->
-    <div class="top-bar">
-      <div class="top-bar-inner">
-        <div class="top-bar-left">
-          <span class="top-label">Contact Centre:</span>
-          <a href="tel:0113140365">011 314 0365</a>
-        </div>
+<body class="products-page">
+  <main class="products-shell" id="products-top">
+    <section class="products-hero">
+      <header class="site-header">
+        <div class="hero-header-shell">
+          <div class="hero-header-main">
+            <a href="index.html" class="logo" aria-label="Northern Hardware & Glass home">
+              <img src="assets/NHG-Logo-HD.jpeg" alt="Northern Hardware & Glass Logo" />
+            </a>
 
-        <div class="top-bar-center">
-          <span class="top-label">General enquiries:</span>
-          <a class="email js-email"
-            data-email-b64="X832xfftQzoHaRVLM0ktd7nT-fWjjJJbu0"
-            href="#"
-            rel="nofollow, noindex"><b>Click Here</b>
-          </a>
-        </div>
+            <div class="hero-header-contact">
+              <div class="hero-contact-line">
+                <span class="top-label">General enquiries:</span>
+                <a class="email js-email"
+                  data-email-b64="X832xfftQzoHaRVLM0ktd7nT-fWjjJJbu0"
+                  href="#"
+                  rel="nofollow, noindex"><b>Click Here</b>
+                </a>
+                <span class="top-label">General enquiries:</span>
+                <a class="email js-email"
+                  data-email-b64="CECWOkme4jW2wADejCisU1JMauVsEIJyufE"
+                  href="#"
+                  rel="nofollow, noindex"><b>Click Here</b>
+                </a>
+              </div>
+              <div class="hero-contact-line">
+                <span class="top-label">Contact Centre:</span>
+                <a href="tel:0113140365">011 314 0365</a>
+              </div>
+            </div>
 
-        <div class="top-bar-right">
-          <!-- Social media icons (real icons now) -->
-          <a href="https://web.facebook.com/profile.php?id=61587085708063&mibextid=wwXIfr&rdid=TPoWIno0lVODcUVx&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1AD1Rg98R5%2F%3Fmibextid%3DwwXIfr%26_rdc%3D1%26_rdr#" target="_blank" class="social-icon" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/brad-lehman-35506b3ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="social-icon" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://www.instagram.com/northern_hardware_glass?igsh=MTcwcTlveHU0bWswaw%3D%3D" target="_blank" class="social-icon" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
+            <div class="hero-header-actions">
+              <div class="hero-header-socials">
+                <a href="https://web.facebook.com/profile.php?id=61587085708063&mibextid=wwXIfr&rdid=TPoWIno0lVODcUVx&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1AD1Rg98R5%2F%3Fmibextid%3DwwXIfr%26_rdc%3D1%26_rdr#" target="_blank" class="social-icon" aria-label="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/brad-lehman-35506b3ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="social-icon" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://www.instagram.com/northern_hardware_glass?igsh=MTcwcTlveHU0bWswaw%3D%3D" target="_blank" class="social-icon" aria-label="Instagram">
+                  <i class="fab fa-instagram"></i>
+                </a>
+              </div>
+
+              <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+
+          <nav class="navbar" id="siteMenu" data-flat-nav="true">
+            <ul class="nav-links" id="mainNav">
+              <li class="nav-item dropdown has-submenu">
+                <a class="nav-main-link" href="index.html" aria-haspopup="true" aria-expanded="false">HOME</a>
+                <ul class="dropdown-menu">
+                  <li><a href="index.html#about-us">Specialties</a></li>
+                  <li><a href="index.html#Gallery">Gallery</a></li>
+                  <li><a href="index.html#socials">Socials</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item dropdown has-submenu">
+                <a class="nav-main-link" href="services.html#services-top" aria-haspopup="true" aria-expanded="false">ABOUT US</a>
+                <ul class="dropdown-menu">
+                  <li><a href="services.html#Why">Why NH&amp;G</a></li>
+                  <li><a href="services.html#Processing">Processing</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-main-link" href="terms.html">TERMS</a>
+              </li>
+
+              <li class="nav-item dropdown has-submenu">
+                <a class="nav-main-link" href="products.html" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
+                <ul class="dropdown-menu">
+                  <li><a href="LamGlass.html">Laminated Glass</a></li>
+                  <li><a href="ToughGlass.html">Toughened Glass</a></li>
+                  <li><a href="DoubleGlaze.html">Double Glazing Units</a></li>
+                  <li><a href="Special.html">Specialised Products</a></li>
+                  <li><a href="Aluminium.html">Aluminium &amp; Hardware</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-main-link" href="contact.html">CONTACT US</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="products-hero-stage">
+        <div class="products-hero-bg" aria-hidden="true"></div>
+        <div class="products-hero-overlay" aria-hidden="true"></div>
+
+        <div class="products-hero-grid home-container">
+          <div class="products-hero-copy glass-panel" data-reveal="up">
+            <h1>Our Range of Products</h1>
+          </div>
         </div>
       </div>
-    </div>
-
-    
-    <!-- NAVBAR -->
-    <nav class="navbar">
-      <div class="navbar-inner">
-        <div class="navbar-left">
-          <!-- Logo -->
-          <a href="index.html" class="logo">
-            <img src="assets/NHG-Logo-hd.webp" alt="Northern Hardware & Glass Logo" />
-            <span>NORTHERN HARDWARE & GLASS (PTY) LTD</span>
-          </a>
-        </div>
-
-        <!-- Main links -->
-        <ul class="nav-links" id="mainNav">
-          <!-- HOME -->
-          <li class="nav-item dropdown has-submenu">
-            <a class="nav-main-link" href="index.html" aria-haspopup="true" aria-expanded="false">HOME</a>
-            <ul class="dropdown-menu">
-              <li><a href="index.html#about-us">Specialties</a></li>
-              <li><a href="index.html#Gallery">Gallery</a></li>
-              <li><a href="index.html#socials">Socials</a></li>
-            </ul>
-          </li>
-
-          <!-- SERVICES -->
-          <li class="nav-item dropdown has-submenu">
-            <a class="nav-main-link" href="services.html" aria-haspopup="true" aria-expanded="false">ABOUT US</a>
-            <ul class="dropdown-menu">
-              <li><a href="services.html#Why">Why NH&amp;G</a></li>
-              <li><a href="services.html#Processing">Processing</a></li>
-              <li><a href="services.html#T&amp;Cs">Terms &amp; Conditions</a></li>
-            </ul>
-          </li>
-
-          <!-- PRODUCTS -->
-          <li class="nav-item dropdown has-submenu">
-            <a class="nav-main-link" href="products.html" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
-            <ul class="dropdown-menu">
-              <li><a href="LamGlass.html">Laminated Glass</a></li>
-              <li><a href="ToughGlass.html">Toughened Glass</a></li>
-              <li><a href="DoubleGlaze.html">Double Glazing Units</a></li>
-              <li><a href="Special.html">Specialised Products</a></li>
-              <li><a href="Aluminium.html">Aluminium & Hardware</a></li>
-            </ul>
-          </li>
-
-          <!-- CONTACT -->
-          <li class="nav-item">
-            <a class="nav-main-link" href="contact.html">CONTACT US</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-  
-
-<main>
-  <section class="product-hero">
-    <div class="product-hero-inner">
-      <div class="section-header section-header-light">    
-        <h2>Our Range of Products</h2>
-      </div>
-    </div>
-  </section>
-
-  <!---------- Product Categories ---------->
-  <section class="contact-page"><br><br><br>
-
-    <section class="product-category-grids product-category-grid-2">
-      <!-- Category 1 -->
-      <article class="product-category-cards category-glass">
-        <div class="product-card-overlay">
-          <a href="LamGlass.html" class="product-card-title-link" aria-label="View Laminated Glass Products">
-            <h3 class="product-card-title">Laminated Glass Products</h3>
-          </a>
-
-          <ul class="product-lines">
-            <li class="product-line">
-              <span class="product-name">Laminated Safety Glass - Clear</span>
-              <a class="mini-view-btn" href="LamGlass.html#laminated-safety-clear">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Laminated Safety Glass - Tinted</span>
-              <a class="mini-view-btn" href="LamGlass.html#laminated-safety-tinted">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Laminated Safety Glass - Rainbow</span>
-              <a class="mini-view-btn" href="LamGlass.html#laminated-safety-rainbow">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Low E Laminated Glass</span>
-              <a class="mini-view-btn" href="LamGlass.html#low-e-laminated">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Sound Reducing Acoustic Glass</span>
-              <a class="mini-view-btn" href="LamGlass.html#acoustic-laminated">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Custom Curved Laminated Glass</span>
-              <a class="mini-view-btn" href="LamGlass.html#curved-laminated">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Laminated Reflective Glass</span>
-              <a class="mini-view-btn" href="LamGlass.html#reflective-laminated">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Multi Laminated Glass for Glass Walkways &amp; Skylights</span>
-              <a class="mini-view-btn" href="LamGlass.html#multi-laminated-walkways">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Bullet Resistant Glass</span>
-              <a class="mini-view-btn" href="LamGlass.html#bullet-resistant-glass">View</a>
-            </li>
-          </ul>
-
-          <div class="product-card-footer">
-            <div class="product-card-divider" aria-hidden="true"></div>
-            <a href="LamGlass.html" class="btn-prod btn-prod-primary btn-prod-wide">
-              View Laminated Glass Product Range
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Category 2 -->
-      <article class="product-category-cards category-architectural">
-        <div class="product-card-overlay">
-          <a href="ToughGlass.html" class="product-card-title-link" aria-label="View Toughened Glass Safety Products">
-            <h3 class="product-card-title">Toughened Glass Safety Products</h3>
-          </a>
-
-          <ul class="product-lines">
-            <li class="product-line">
-              <span class="product-name">Balustrading - Flat & Curved</span>
-              <a class="mini-view-btn" href="ToughGlass.html#toughened-balustrades">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Tinted Balustrading – Flat & Curved</span>
-              <a class="mini-view-btn" href="ToughGlass.html#tinted-balustrades">View</a>
-            </li>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Display Cabinets - Flat & Curved</span>
-              <a class="mini-view-btn" href="ToughGlass.html#toughened-display-cabinets">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Shopfronts</span>
-              <a class="mini-view-btn" href="ToughGlass.html#shopfronts">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Frameless Showers</span>
-              <a class="mini-view-btn" href="ToughGlass.html#frameless-showers">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Wall Partitioning &amp; Decorative Glass Displays</span>
-              <a class="mini-view-btn" href="ToughGlass.html#wall-partitioning">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Toughened Glass Tables</span>
-              <a class="mini-view-btn" href="ToughGlass.html#toughened-glass-tables">View</a>
-            </li>
-          </ul>
-
-          <div class="product-card-footer">
-            <div class="product-card-divider" aria-hidden="true"></div>
-            <a href="ToughGlass.html" class="btn-prod btn-prod-primary btn-prod-wide">
-              View Toughened Glass Products Range
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Category 3 -->
-      <article class="product-category-cards category-interior">
-        <div class="product-card-overlay">
-          <a href="DoubleGlaze.html" class="product-card-title-link" aria-label="View Double Glazing Units">
-            <h3 class="product-card-title">Double Glazing Units</h3>
-          </a>
-
-          <ul class="product-lines">
-            <li class="product-line">
-              <span class="product-name">Environmentally Friendly Insulated Glass</span>
-              <a class="mini-view-btn" href="DoubleGlaze.html#eco-insulated-glass">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Sealed Insulated Glass Units</span>
-              <a class="mini-view-btn" href="DoubleGlaze.html#sealed-igu">View</a>
-            </li>
-          </ul>
-
-          <div class="product-card-footer">
-            <div class="product-card-divider" aria-hidden="true"></div>
-            <a href="DoubleGlaze.html" class="btn-prod btn-prod-primary btn-prod-wide">
-              View Double Glazing Product Range
-            </a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Category 4 -->
-      <article class="product-category-cards category-specialised">
-        <div class="product-card-overlay">
-          <a href="Special.html" class="product-card-title-link" aria-label="View Specialised Products">
-            <h3 class="product-card-title">Exclusive Range Of Specialised Products</h3>
-          </a>
-
-          <ul class="product-lines">
-            <li class="product-line">
-              <span class="product-name">Custom Vintage Car Screens &amp; Side Glass</span>
-              <a class="mini-view-btn" href="Special.html#vintage-car-glass">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Safety Glass for Farming & Mining Industry Equipment</span>
-              <a class="mini-view-btn" href="Special.html#mining-safety-glass">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Kitchen Splashbacks</span>
-              <a class="mini-view-btn" href="Special.html#kitchen-splashbacks">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Mirrors</span>
-              <a class="mini-view-btn" href="Special.html#mirrors">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Aluminium Mirrors</span>
-              <a class="mini-view-btn" href="Special.html#alu-mirrors">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Cottage Window Collection (Moulda Glass)</span>
-              <a class="mini-view-btn" href="Special.html#cottage-window-collection">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Casement Window Collection</span>
-              <a class="mini-view-btn" href="Special.html#casement-window-collection">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Glass Pedestals</span>
-              <a class="mini-view-btn" href="Special.html#glass-pedestals">View</a>
-            </li>
-          </ul>
-
-          <div class="product-card-footer">
-            <div class="product-card-divider" aria-hidden="true"></div>
-            <a href="Special.html" class="btn-prod btn-prod-primary btn-prod-wide">
-              View Specialised Glass Product Range
-            </a>
-          </div>
-        </div>
-      </article>
-
-
-      <!-- Category 5 -->
-      <article class="product-category-cards category-aluminium">
-        <div class="product-card-overlay">
-          <a href="Aluminium.html" class="product-card-title-link" aria-label="View aluminium Products">
-            <h3 class="product-card-title">Aluminium & Hardware</h3>
-          </a>
-
-          <ul class="product-lines">
-            <li class="product-line">
-              <span class="product-name">Aluminium Profiles &amp; Accessories</span>
-              <a class="mini-view-btn" href="Aluminium.html#aluminium">View</a>
-            </li>
-            <li class="product-line">
-              <span class="product-name">Shower Hardware</span>
-              <a class="mini-view-btn" href="Aluminium.html#shower-hardware">View</a>
-            </li>
-          </ul>
-
-          <div class="product-card-footer">
-            <div class="product-card-divider" aria-hidden="true"></div>
-            <a href="Aluminium.html" class="btn-prod btn-prod-primary btn-prod-wide">
-              View Aluminium & Hardware Range
-            </a>
-          </div>
-        </div>
-      </article>
     </section>
 
-    <br><br><br><br><br>
-  </section>
+    <section class="home-section products-range-section">
+      <div class="home-container">
+        <div class="product-category-grids product-category-grid-2">
+          <article class="product-category-cards category-glass" data-reveal="card">
+            <div class="product-card-overlay">
+              <a href="LamGlass.html" class="product-card-title-link" aria-label="View Laminated Glass Products">
+                <h3 class="product-card-title">Laminated Glass Products</h3>
+              </a>
 
+              <ul class="product-lines">
+                <li class="product-line">
+                  <span class="product-name">Laminated Safety Glass - Clear</span>
+                  <a class="mini-view-btn" href="LamGlass.html#laminated-safety-clear">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Laminated Safety Glass - Tinted</span>
+                  <a class="mini-view-btn" href="LamGlass.html#laminated-safety-tinted">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Laminated Safety Glass - Rainbow</span>
+                  <a class="mini-view-btn" href="LamGlass.html#laminated-safety-rainbow">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Low E Laminated Glass</span>
+                  <a class="mini-view-btn" href="LamGlass.html#low-e-laminated">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Sound Reducing Acoustic Glass</span>
+                  <a class="mini-view-btn" href="LamGlass.html#acoustic-laminated">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Custom Curved Laminated Glass</span>
+                  <a class="mini-view-btn" href="LamGlass.html#curved-laminated">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Laminated Reflective Glass</span>
+                  <a class="mini-view-btn" href="LamGlass.html#reflective-laminated">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Multi Laminated Glass for Glass Walkways &amp; Skylights</span>
+                  <a class="mini-view-btn" href="LamGlass.html#multi-laminated-walkways">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Bullet Resistant Glass</span>
+                  <a class="mini-view-btn" href="LamGlass.html#bullet-resistant-glass">View</a>
+                </li>
+              </ul>
 
-  <!-- LOGO BRIDGE  -->
-  <section class="logo-bridge" aria-label="Northern Hardware & Glass logo">
-    <div class="logo-bridge-inner">
-      <img
-        src="assets/NHG-Logo-hd.webp"
-        alt="Northern Hardware & Glass (Pty) Ltd logo"
-        class="logo-bridge-img"
-      />
-    </div>
-  </section><br>
-
-
-  <!----------Services---------->
-  <section class="page">
-    <section class="page">
-      <section class="section">
-        <section class="product-hero-home">
-          <div class="product-hero-home-inner">
-            <h2 class="section-header-homepage">Our Services</h2>
-          </div>
-        </section>
-
-        <div class="cards-grid">
-          <article class="card">
-            <div class="card-header">
-              <h3 class="card-title">Retail Glass</h3>
-              <span class="card-tag">Home &amp; Lifestyle</span>
-            </div>
-            <p class="card-text">
-              Glass products and hardware for homeowners and walk-in customers,
-              including mirrors, showers, windows and interior glass features.<br>
-              For more information on our products, visit our <a href="products.html"><b>Products Page</b></a>.
-            </p>
-            <div class="card-media">
-              <img src="assets/RetailGlassService.jpg" alt="Shower glass installation" />
+              <div class="product-card-footer">
+                <div class="product-card-divider" aria-hidden="true"></div>
+                <a href="LamGlass.html" class="btn-prod btn-prod-primary btn-prod-wide">
+                  View Laminated Glass Product Range
+                </a>
+              </div>
             </div>
           </article>
 
-          <article class="card">
-            <div class="card-header">
-              <h3 class="card-title">Wholesale Supply</h3>
-              <span class="card-tag">Trade</span>
-            </div>
-            <p class="card-text">
-              Supply of sheets, processed glass and aluminium systems to installers,
-              fabricators and construction companies across South Africa.<br>
-              For more information on our products, visit our <a href="products.html"><b>Products Page</b></a>.
-            </p>
-            <div class="card-media">
-              <img src="assets/Glass-retail-service.webp" alt="Warehouse with glass sheets" />
+          <article class="product-category-cards category-architectural" data-reveal="card">
+            <div class="product-card-overlay">
+              <a href="ToughGlass.html" class="product-card-title-link" aria-label="View Toughened Glass Safety Products">
+                <h3 class="product-card-title">Toughened Glass Safety Products</h3>
+              </a>
+
+              <ul class="product-lines">
+                <li class="product-line">
+                  <span class="product-name">Balustrading - Flat & Curved</span>
+                  <a class="mini-view-btn" href="ToughGlass.html#toughened-balustrades">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Tinted Balustrading &#226;&#8364;&#8220; Flat &amp; Curved</span>
+                  <a class="mini-view-btn" href="ToughGlass.html#tinted-balustrades">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Display Cabinets - Flat & Curved</span>
+                  <a class="mini-view-btn" href="ToughGlass.html#toughened-display-cabinets">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Shopfronts</span>
+                  <a class="mini-view-btn" href="ToughGlass.html#shopfronts">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Frameless Showers</span>
+                  <a class="mini-view-btn" href="ToughGlass.html#frameless-showers">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Wall Partitioning &amp; Decorative Glass Displays</span>
+                  <a class="mini-view-btn" href="ToughGlass.html#wall-partitioning">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Toughened Glass Tables</span>
+                  <a class="mini-view-btn" href="ToughGlass.html#toughened-glass-tables">View</a>
+                </li>
+              </ul>
+
+              <div class="product-card-footer">
+                <div class="product-card-divider" aria-hidden="true"></div>
+                <a href="ToughGlass.html" class="btn-prod btn-prod-primary btn-prod-wide">
+                  View Toughened Glass Products Range
+                </a>
+              </div>
             </div>
           </article>
 
-          <article class="card">
-            <div class="card-header">
-              <h3 class="card-title">Manufacturing</h3>
-              <span class="card-tag">Custom</span>
+          <article class="product-category-cards category-interior" data-reveal="card">
+            <div class="product-card-overlay">
+              <a href="DoubleGlaze.html" class="product-card-title-link" aria-label="View Double Glazing Units">
+                <h3 class="product-card-title">Double Glazing Units</h3>
+              </a>
+
+              <ul class="product-lines">
+                <li class="product-line">
+                  <span class="product-name">Environmentally Friendly Insulated Glass</span>
+                  <a class="mini-view-btn" href="DoubleGlaze.html#eco-insulated-glass">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Sealed Insulated Glass Units</span>
+                  <a class="mini-view-btn" href="DoubleGlaze.html#sealed-igu">View</a>
+                </li>
+              </ul>
+
+              <div class="product-card-footer">
+                <div class="product-card-divider" aria-hidden="true"></div>
+                <a href="DoubleGlaze.html" class="btn-prod btn-prod-primary btn-prod-wide">
+                  View Double Glazing Product Range
+                </a>
+              </div>
             </div>
-            <p class="card-text">
-              Custom cutting, laminating, toughening and processing of glass to meet
-              architectural and design specifications.
-              <br> For more information on our products, visit our <a href="products.html"><b>Products Page</b></a>.
-            </p>
-            <div class="card-media">
-              <img src="assets/Manufacturing-and-processing-service.webp" alt="Glass processing machinery" />
+          </article>
+
+          <article class="product-category-cards category-specialised" data-reveal="card">
+            <div class="product-card-overlay">
+              <a href="Special.html" class="product-card-title-link" aria-label="View Specialised Products">
+                <h3 class="product-card-title">Exclusive Range Of Specialised Products</h3>
+              </a>
+
+              <ul class="product-lines">
+                <li class="product-line">
+                  <span class="product-name">Custom Vintage Car Screens &amp; Side Glass</span>
+                  <a class="mini-view-btn" href="Special.html#vintage-car-glass">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Safety Glass for Farming & Mining Industry Equipment</span>
+                  <a class="mini-view-btn" href="Special.html#mining-safety-glass">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Kitchen Splashbacks</span>
+                  <a class="mini-view-btn" href="Special.html#kitchen-splashbacks">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Mirrors</span>
+                  <a class="mini-view-btn" href="Special.html#mirrors">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Aluminium Mirrors</span>
+                  <a class="mini-view-btn" href="Special.html#alu-mirrors">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Cottage Window Collection (Moulda Glass)</span>
+                  <a class="mini-view-btn" href="Special.html#cottage-window-collection">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Casement Window Collection</span>
+                  <a class="mini-view-btn" href="Special.html#casement-window-collection">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Glass Pedestals</span>
+                  <a class="mini-view-btn" href="Special.html#glass-pedestals">View</a>
+                </li>
+              </ul>
+
+              <div class="product-card-footer">
+                <div class="product-card-divider" aria-hidden="true"></div>
+                <a href="Special.html" class="btn-prod btn-prod-primary btn-prod-wide">
+                  View Specialised Glass Product Range
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-category-cards category-aluminium" data-reveal="card">
+            <div class="product-card-overlay">
+              <a href="Aluminium.html" class="product-card-title-link" aria-label="View aluminium Products">
+                <h3 class="product-card-title">Aluminium &amp; Hardware</h3>
+              </a>
+
+              <ul class="product-lines">
+                <li class="product-line">
+                  <span class="product-name">Aluminium Profiles &amp; Accessories</span>
+                  <a class="mini-view-btn" href="Aluminium.html#aluminium">View</a>
+                </li>
+                <li class="product-line">
+                  <span class="product-name">Shower Hardware</span>
+                  <a class="mini-view-btn" href="Aluminium.html#shower-hardware">View</a>
+                </li>
+              </ul>
+
+              <div class="product-card-footer">
+                <div class="product-card-divider" aria-hidden="true"></div>
+                <a href="Aluminium.html" class="btn-prod btn-prod-primary btn-prod-wide">
+                  View Aluminium &amp; Hardware Range
+                </a>
+              </div>
             </div>
           </article>
         </div>
-        <br /><br />
-        <div>
-          <a href="services.html" class="btn btn-primary">Go to Services</a>
-        </div>
-      </section>
-  </section>
-</main>
+      </div>
+    </section>
 
-<!------- footer ---------
- ------------------------>   
+  </main>
+
   <footer class="site-footer">
-    <!-- TOP CTA STRIP -->
     <section class="footer-cta">
       <div class="footer-cta-inner">
-        <h2>Get in Touch</h2>
-        <p>Share your project details and we'll get back to you with options and pricing.</p>
+        <p class="footer-cta-kicker">Get in Touch</p>
+        <h2>Talk to our team about your next glass, aluminium, or specialised product requirement.</h2>
+        <p>Share your project details and we will guide you toward the right product, processing option, or branch support.</p>
+        <div class="footer-cta-actions">
           <a href="contact.html" class="btn btn-cta-solid">
             <i class="fa-solid fa-location-dot"></i>
-            <span>Locations</span>
+            <span>View Locations</span>
           </a>
           <a href="contact.html#enquiry" class="btn btn-cta-outline">
             <i class="fa-solid fa-envelope"></i>
@@ -427,18 +353,14 @@
       </div>
     </section>
 
-    <!-- MIDDLE FOOTER -->
     <section class="footer-main">
       <div class="footer-main-inner">
-        <!-- Brand / About -->
         <div class="footer-col footer-brand">
-          <!-- you can switch this to a white logo later if you have one -->
           <div class="footer-logo">
-            <img src="assets/NHG-Logo-hd.webp" alt="Northern Hardware & Glass logo">
+            <img src="assets/NHG-Logo-HD.jpeg" alt="Northern Hardware &amp; Glass logo" />
           </div>
           <p>
-            With decades of experience in glass supply, processing and installation,
-            Northern Hardware &amp; Glass delivers clarity, safety and durability in every pane.
+            Northern Hardware &amp; Glass (Pty) Ltd delivers trusted glass supply, processing, and manufacturing solutions with a focus on quality, precision, and dependable service.
           </p>
 
           <div class="footer-socials">
@@ -454,16 +376,17 @@
           </div>
         </div>
 
-        <!-- Quick Links -->
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">About Us</a></li>
+            <li><a href="services.html#services-top">About Us</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
+
         <div class="footer-col">
           <h4>Product Pages</h4>
           <ul>
@@ -471,22 +394,22 @@
             <li><a href="ToughGlass.html">Toughened Glass Safety Products</a></li>
             <li><a href="DoubleGlaze.html">Double Glazing Units</a></li>
             <li><a href="Special.html">Exclusive Range of Specialised Products</a></li>
-            <li><a href="Aluminium.html">Aluminium & Hardware</a></li>
+            <li><a href="Aluminium.html">Aluminium &amp; Hardware</a></li>
           </ul>
         </div>
 
-        <!-- Contact Info -->
         <div class="footer-col">
           <h4>Contact Info</h4>
           <ul class="footer-contact-list">
             <li><i class="fa-solid fa-phone"></i> <span><a href="tel:0113140365">Tel: 011 314 0365</a></span></li>
-            <li><i class="fa-solid fa-envelope"></i> 
-                <span>Email:</span>
-                <a class="email js-email"
-                  data-email-b64="X832xfftQzoHaRVLM0ktd7nT-fWjjJJbu0"
-                  href="#"
-                  rel="nofollow, noindex"><b>Click Here</b>
-                </a>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <span>Email:</span>
+              <a class="email js-email"
+                data-email-b64="X832xfftQzoHaRVLM0ktd7nT-fWjjJJbu0"
+                href="#"
+                rel="nofollow, noindex"><b>Click Here</b>
+              </a>
             </li>
             <li>
               <i class="fa-solid fa-location-dot"></i>
@@ -494,20 +417,18 @@
             </li>
             <li>
               <i class="fa-solid fa-clock"></i>
-              <span>Mon–Fri: 07:30–17:00</span>
+              <span>Mon-Fri: 07:30-17:00</span>
             </li>
           </ul>
         </div>
       </div>
     </section>
 
-    <!-- BOTTOM COPYRIGHT STRIP -->
     <div class="footer-bottom">
       <div class="footer-bottom-inner">
-        <p>© <span id="year-footer"></span> Northern Hardware &amp; Glass (Pty) Ltd. All rights reserved.</p>
+        <p>&copy; <span id="year-footer"></span> Northern Hardware &amp; Glass (Pty) Ltd. All rights reserved.</p>
       </div>
     </div>
   </footer>
 </body>
 </html>
-
