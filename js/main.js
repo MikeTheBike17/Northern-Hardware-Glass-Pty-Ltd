@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const siteHeader = document.querySelector(".site-header");
   const siteMenu = document.getElementById("siteMenu");
   const isServicesPage = document.body.classList.contains("services-page");
+  const isLaminatedPage = document.body.classList.contains("laminated-page");
   const useFlatDropdownNav = siteMenu?.dataset.flatNav === "true";
   const HEADER_MENU_TRANSITION_MS = 280;
   let headerMenuCloseTimer = null;
@@ -422,6 +423,67 @@ document.addEventListener("DOMContentLoaded", () => {
         closeZoom();
       }
     });
+  })();
+
+  /* ------------------------------
+     LAMINATED SELECTION PANEL SCROLL LIFT
+  ------------------------------ */
+  (() => {
+    if (!isLaminatedPage || prefersReducedMotion.matches) return;
+
+    const section = document.querySelector(".laminated-catalog-section");
+    const panel = section?.querySelector(".laminated-selection-panel");
+
+    if (!section || !panel) return;
+
+    const clamp = (value, min, max) => Math.min(max, Math.max(min, value));
+
+    const getMaxLift = () => {
+      if (window.innerWidth <= HERO_MOBILE_BREAKPOINT) return 24;
+      if (window.innerWidth <= 1120) return 42;
+      return 64;
+    };
+
+    let liftFrame = null;
+    let currentLift = 0;
+    let targetLift = 0;
+
+    const measureLift = () => {
+      const rect = section.getBoundingClientRect();
+      const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+      const start = viewportHeight * 0.9;
+      const end = -rect.height * 0.2;
+      const progress = clamp((start - rect.top) / (start - end), 0, 1);
+
+      targetLift = -progress * getMaxLift();
+    };
+
+    const renderLift = () => {
+      const delta = targetLift - currentLift;
+
+      if (Math.abs(delta) < 0.12) {
+        currentLift = targetLift;
+        panel.style.setProperty("--laminated-selection-scroll-shift", `${currentLift.toFixed(2)}px`);
+        liftFrame = null;
+        return;
+      }
+
+      currentLift += delta * 0.14;
+      panel.style.setProperty("--laminated-selection-scroll-shift", `${currentLift.toFixed(2)}px`);
+      liftFrame = window.requestAnimationFrame(renderLift);
+    };
+
+    const syncLift = () => {
+      measureLift();
+
+      if (liftFrame === null) {
+        liftFrame = window.requestAnimationFrame(renderLift);
+      }
+    };
+
+    syncLift();
+    window.addEventListener("scroll", syncLift, { passive: true });
+    window.addEventListener("resize", syncLift);
   })();
 
   /* ------------------------------
