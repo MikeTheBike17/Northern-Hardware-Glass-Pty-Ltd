@@ -632,8 +632,8 @@
     if (glassHost) {
       const scene = new THREE.Scene();
 
-      const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
-      camera.position.set(0, 1.45, 4.5);
+      const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 100);
+      camera.position.set(0, 1.45, 5.35);
       camera.lookAt(0, 0.15, 0);
 
       const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
@@ -704,6 +704,7 @@
       windscreen.rotation.x = -0.12;
       windscreen.position.y = 0.18;
       windscreen.position.z = -0.12;
+      windscreen.scale.setScalar(0.8);
       scene.add(windscreen);
 
       const glowShell = new THREE.Mesh(
@@ -843,7 +844,7 @@
         windscreen.rotation.y += (targetRotation.y - windscreen.rotation.y) * 0.08;
         windscreen.rotation.z += (targetRotation.z - windscreen.rotation.z) * 0.08;
 
-        targetPosition.y = 0.18 + Math.sin(elapsed * 1.2) * 0.08;
+        targetPosition.y = 0.18 + Math.sin(elapsed * 1.2) * 0.05;
         targetPosition.z = -0.12 + Math.cos(elapsed * 0.9) * 0.025;
         windscreen.position.lerp(targetPosition, 0.08);
 

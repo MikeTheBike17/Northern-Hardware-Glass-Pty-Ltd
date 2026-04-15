@@ -4746,7 +4746,7 @@ body.services-page .services-hero-actions {
 body.services-page .services-hero-feature {
   position: relative;
   padding: 1.1rem;
-  overflow: hidden;
+  overflow: visible;
   isolation: isolate;
 }
 
@@ -4779,7 +4779,7 @@ body.services-page .services-feature-secondary {
 body.services-page .services-glass-stage {
   display: grid;
   place-items: center;
-  min-height: 38rem;
+  min-height: 43rem;
   padding: 2rem;
   transform: translateX(2rem);
   background: transparent;
@@ -4796,8 +4796,8 @@ body.services-page .services-glass-stage::after {
 
 body.services-page .services-glass-scene {
   position: relative;
-  width: min(100%, 31rem);
-  height: clamp(18rem, 34vw, 25rem);
+  width: min(100%, 37rem);
+  height: clamp(23rem, 41vw, 31rem);
   display: block;
   overflow: visible;
 }
@@ -5823,7 +5823,7 @@ body.services-page .footer-socials a {
   }
 
   body.services-page .services-glass-stage {
-    min-height: 28rem;
+    min-height: 34rem;
     padding: 1.5rem;
     transform: none;
   }
