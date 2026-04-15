@@ -9463,6 +9463,230 @@ body.products-page.product-detail-page .detail-inline-media figcaption {
   line-height: 1.65;
 }
 
+body.products-page.product-detail-page .double-glaze-config-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+body.products-page.product-detail-page .double-glaze-config-copy .laminated-detail-list {
+  margin: 0;
+}
+
+body.products-page.product-detail-page .double-glaze-config-media {
+  margin-top: 0;
+}
+
+@media (min-width: 900px) {
+  body.products-page.product-detail-page .double-glaze-config-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 34%);
+    gap: 1.5rem;
+  }
+
+  body.products-page.product-detail-page .double-glaze-config-media {
+    max-width: 468px;
+    justify-self: end;
+  }
+}
+
+body.products-page.product-detail-page .double-glaze-performance-card h2 {
+  margin-bottom: 1rem;
+}
+
+body.products-page.product-detail-page .double-glaze-table-wrap {
+  width: 100%;
+  overflow-x: auto;
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table {
+  border-collapse: collapse;
+  min-width: 1200px;
+  width: 100%;
+  table-layout: fixed;
+  border: 1px solid #666666;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table th,
+body.products-page.product-detail-page .double-glaze-performance-table td {
+  border: 1px solid #666666;
+  padding: 4px 6px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table thead th {
+  background: #9a9a9a;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table .top-head {
+  font-size: 15px;
+  height: 38px;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table .blue-block {
+  background: #0d5cab;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table .section-row td {
+  background: #efefef;
+  color: #13253b;
+  font-weight: 700;
+  text-align: left;
+  padding: 8px;
+  font-size: 15px;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table .code,
+body.products-page.product-detail-page .double-glaze-performance-table .product {
+  text-align: left;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table .code {
+  width: 90px;
+  font-weight: 400;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table .product {
+  width: 170px;
+  font-weight: 600;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table .igidb-col {
+  width: 88px;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table .product-col {
+  width: 168px;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table .narrow {
+  width: 48px;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table .medium {
+  width: 58px;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table .wide {
+  width: 68px;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table .vertical-cell {
+  height: 118px;
+  padding: 0;
+  position: relative;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table .vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 13px;
+  line-height: 1;
+  letter-spacing: 0.3px;
+  padding: 8px 0;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table .small-note {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  margin-top: 4px;
+  color: #f2f2f2;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table .sub-note {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-top: 4px;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table tbody td {
+  background: #ffffff;
+  color: #1f1f1f;
+}
+
+body.products-page.product-detail-page .double-glaze-performance-table tbody tr:hover td {
+  background: #f7fbff;
+}
+
+@media (min-width: 769px) {
+  body.products-page.product-detail-page .double-glaze-performance-card {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+  }
+
+  body.products-page.product-detail-page .double-glaze-table-wrap {
+    overflow-x: visible;
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  body.products-page.product-detail-page .double-glaze-performance-table {
+    min-width: 0;
+    width: 100%;
+  }
+
+  body.products-page.product-detail-page .double-glaze-performance-table th,
+  body.products-page.product-detail-page .double-glaze-performance-table td {
+    padding: 4px 3px;
+    font-size: 12px;
+  }
+
+  body.products-page.product-detail-page .double-glaze-performance-table .top-head {
+    font-size: 13px;
+  }
+
+  body.products-page.product-detail-page .double-glaze-performance-table .blue-block {
+    font-size: 13px;
+  }
+
+  body.products-page.product-detail-page .double-glaze-performance-table .vertical-text {
+    font-size: 11px;
+  }
+
+  body.products-page.product-detail-page .double-glaze-performance-table .small-note {
+    font-size: 10px;
+  }
+
+  body.products-page.product-detail-page .double-glaze-performance-table .igidb-col,
+  body.products-page.product-detail-page .double-glaze-performance-table .code {
+    width: 8%;
+  }
+
+  body.products-page.product-detail-page .double-glaze-performance-table .product-col,
+  body.products-page.product-detail-page .double-glaze-performance-table .product {
+    width: 16%;
+  }
+
+  body.products-page.product-detail-page .double-glaze-performance-table .narrow {
+    width: 4.6%;
+  }
+
+  body.products-page.product-detail-page .double-glaze-performance-table .medium {
+    width: 5.4%;
+  }
+}
+
 body.products-page.product-detail-page .schematech-catalog-btn,
 body.products-page.product-detail-page .schematech-catalog-btn span,
 body.products-page.product-detail-page .schematech-catalog-btn i {
@@ -9624,6 +9848,18 @@ body.products-page.product-detail-page .laminated-cta-actions .btn-cta-solid {
 
   body.products-page.product-detail-page .toughened-spec-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  body.products-page.product-detail-page .double-glaze-performance-table th,
+  body.products-page.product-detail-page .double-glaze-performance-table td {
+    font-size: 12px;
+    padding: 4px;
+  }
+
+  body.products-page.product-detail-page .double-glaze-performance-table .vertical-text {
+    font-size: 12px;
   }
 }
 
