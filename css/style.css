@@ -4870,11 +4870,11 @@ body.services-page .services-intro-panel {
 }
 
 body.services-page .services-intro-panel[data-reveal] {
-  transform: translate3d(0, calc(28px + var(--services-intro-scroll-shift)), 0) scale(0.985);
+  transform: translate3d(0, calc(28px + 1.5rem + var(--services-intro-scroll-shift)), 0) scale(0.985);
 }
 
 body.services-page .services-intro-panel[data-reveal].is-visible {
-  transform: translate3d(0, var(--services-intro-scroll-shift), 0) scale(1);
+  transform: translate3d(0, calc(1.5rem + var(--services-intro-scroll-shift)), 0) scale(1);
 }
 
 body.services-page .services-intro-media {
@@ -5274,11 +5274,11 @@ body.services-page .services-edge-panel {
 }
 
 body.services-page .services-edge-panel[data-reveal] {
-  transform: translate3d(0, calc(28px + var(--services-processing-scroll-shift)), 0) scale(0.985);
+  transform: translate3d(0, calc(28px + 1.5rem + var(--services-processing-scroll-shift)), 0) scale(0.985);
 }
 
 body.services-page .services-edge-panel[data-reveal].is-visible {
-  transform: translate3d(0, var(--services-processing-scroll-shift), 0) scale(1);
+  transform: translate3d(0, calc(1.5rem + var(--services-processing-scroll-shift)), 0) scale(1);
 }
 
 body.services-page .edge-profiles-highlight {
@@ -6558,6 +6558,9 @@ body.home-page .hero-actions .btn-primary:focus-visible {
 
 .intro-card .btn-secondary {
   width: fit-content;
+  min-height: 54px;
+  padding: 0.95rem 1.7rem;
+  border-radius: 14px;
   background: linear-gradient(135deg, #214594, #315fc8);
   border-color: rgba(33, 69, 148, 0.12);
   color: #ffffff;
@@ -8854,6 +8857,10 @@ body.products-page.laminated-page .laminated-hero-copy h1 {
   color: #f8fbff;
 }
 
+body.products-page.laminated-page .laminated-hero-copy .section-kicker {
+  color: #ffffff;
+}
+
 body.products-page.laminated-page .laminated-hero-text {
   margin: 1.15rem 0 0;
   max-width: 58ch;
@@ -8970,6 +8977,7 @@ body.products-page.laminated-page .laminated-hero-actions .btn-secondary:focus-v
 body.products-page.laminated-page .laminated-hero-panel {
   padding: 1.45rem;
   align-self: end;
+  justify-self: center;
   margin-bottom: 0.35rem;
 }
 
@@ -9235,12 +9243,16 @@ body.products-page.product-detail-page .laminated-detail-back {
   position: relative;
   overflow: hidden;
   isolation: isolate;
+  animation: laminatedBackButtonDrift 2.8s ease-in-out infinite;
+  transition:
+    transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 220ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 body.products-page.product-detail-page .laminated-detail-back:hover,
 body.products-page.product-detail-page .laminated-detail-back:focus-visible {
   color: #ffffff;
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.03);
   box-shadow: 0 22px 38px rgba(23, 53, 126, 0.24);
 }
 
@@ -9265,6 +9277,18 @@ body.products-page.product-detail-page .laminated-detail-back-icon {
   align-items: center;
   justify-content: center;
   font-size: 0.85rem;
+}
+
+@keyframes laminatedBackButtonDrift {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 body.products-page.product-detail-page .laminated-detail-copy h1 {
@@ -9444,6 +9468,13 @@ body.products-page.product-detail-page .laminated-cta-actions .btn-cta-solid {
   }
 }
 
+@media (hover: hover) and (pointer: fine) {
+  body.products-page.product-detail-page .laminated-detail-back:hover,
+  body.products-page.product-detail-page .laminated-detail-back:focus-visible {
+    animation-play-state: paused;
+  }
+}
+
 @media (max-width: 720px) {
   body.products-page.laminated-page .laminated-hero,
   body.products-page.laminated-page .laminated-hero-stage {
@@ -9505,9 +9536,19 @@ body.products-page.product-detail-page .laminated-cta-actions .btn-cta-solid {
   body.products-page.product-detail-page .laminated-detail-tag,
   body.products-page.product-detail-page .laminated-cta-actions .btn-cta-solid,
   body.products-page.product-detail-page .laminated-cta-actions .btn-cta-outline,
-  body.products-page.laminated-page .laminated-hero-actions .btn,
   body.products-page.laminated-page .laminated-card-link {
     width: 100%;
+  }
+
+  body.products-page.laminated-page .laminated-hero-actions {
+    grid-template-columns: max-content;
+    justify-content: center;
+    justify-items: stretch;
+  }
+
+  body.products-page.laminated-page .laminated-hero-actions .btn {
+    width: auto;
+    min-width: 0;
   }
 
   body.products-page.product-detail-page .laminated-detail-image img {
@@ -10305,6 +10346,10 @@ body.contact-page-view .contact-hero-copy h1 {
   font-size: clamp(2.7rem, 5vw, 4.8rem);
   line-height: 0.98;
   color: #f8fbff;
+}
+
+body.contact-page-view .contact-hero-copy .section-kicker {
+  color: #ffffff;
 }
 
 body.contact-page-view .contact-hero-actions {
