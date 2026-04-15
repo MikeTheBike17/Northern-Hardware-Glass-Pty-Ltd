@@ -9418,6 +9418,69 @@ body.products-page.laminated-detail-page .footer-cta {
   display: none;
 }
 
+body.products-page.toughened-page .laminated-hero-bg {
+  background:
+    linear-gradient(135deg, rgba(19, 45, 88, 0.18), rgba(7, 13, 22, 0.58)),
+    url("images/Toughened-glass-background.jpg") center/cover no-repeat;
+}
+
+body.products-page.product-detail-page .toughened-spec-card h2 {
+  margin-bottom: 0.75rem;
+}
+
+body.products-page.product-detail-page .toughened-spec-card .toughened-spec-note {
+  margin: 0;
+  color: #52627a;
+  line-height: 1.75;
+}
+
+body.products-page.product-detail-page .toughened-spec-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+  margin-top: 1.35rem;
+}
+
+body.products-page.product-detail-page .toughened-spec-block {
+  padding: 1.15rem 1.2rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.52);
+  border: 1px solid rgba(160, 182, 210, 0.26);
+}
+
+body.products-page.product-detail-page .toughened-spec-block h3 {
+  margin: 0 0 0.7rem;
+  color: #13253b;
+}
+
+body.products-page.product-detail-page .toughened-spec-block .laminated-detail-list {
+  margin: 0;
+}
+
+body.products-page.product-detail-page .toughened-spec-block .laminated-detail-list li {
+  margin-bottom: 0.7rem;
+}
+
+body.products-page.product-detail-page .toughened-spec-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.35rem;
+}
+
+body.products-page.product-detail-page .toughened-spec-actions .btn {
+  min-height: 50px;
+}
+
+body.products-page.product-detail-page .toughened-spec-actions .btn,
+body.products-page.product-detail-page .toughened-spec-actions .btn i,
+body.products-page.product-detail-page .toughened-spec-actions .btn:hover,
+body.products-page.product-detail-page .toughened-spec-actions .btn:focus-visible,
+body.products-page.product-detail-page .toughened-spec-actions .btn:hover i,
+body.products-page.product-detail-page .toughened-spec-actions .btn:focus-visible i {
+  color: var(--nhg-accent);
+}
+
 body.products-page.product-detail-page .laminated-cta-actions {
   display: flex;
   flex-wrap: wrap;
@@ -9465,6 +9528,10 @@ body.products-page.product-detail-page .laminated-cta-actions .btn-cta-solid {
 
   body.products-page.product-detail-page .laminated-cta-actions {
     justify-content: flex-start;
+  }
+
+  body.products-page.product-detail-page .toughened-spec-grid {
+    grid-template-columns: 1fr;
   }
 }
 
