@@ -9463,6 +9463,28 @@ body.products-page.product-detail-page .detail-inline-media figcaption {
   line-height: 1.65;
 }
 
+body.products-page.product-detail-page .schematech-catalog-btn,
+body.products-page.product-detail-page .schematech-catalog-btn span,
+body.products-page.product-detail-page .schematech-catalog-btn i {
+  color: #1f3f8f;
+}
+
+body.products-page.product-detail-page .schematech-catalog-btn {
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    background-color 0.22s ease,
+    border-color 0.22s ease;
+}
+
+body.products-page.product-detail-page .schematech-catalog-btn:hover,
+body.products-page.product-detail-page .schematech-catalog-btn:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(31, 63, 143, 0.12);
+  border-color: rgba(31, 63, 143, 0.34);
+  box-shadow: 0 16px 28px rgba(19, 37, 69, 0.12);
+}
+
 body.products-page.product-detail-page .special-detail-inline-media {
   margin-top: 1.15rem;
   border-radius: 24px;
@@ -9527,6 +9549,11 @@ body.products-page.product-detail-page .toughened-spec-actions {
 
 body.products-page.product-detail-page .toughened-spec-actions .btn {
   min-height: 50px;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease,
+    background-color 0.22s ease,
+    border-color 0.22s ease;
 }
 
 body.products-page.product-detail-page .toughened-spec-actions .btn,
@@ -9536,6 +9563,14 @@ body.products-page.product-detail-page .toughened-spec-actions .btn:focus-visibl
 body.products-page.product-detail-page .toughened-spec-actions .btn:hover i,
 body.products-page.product-detail-page .toughened-spec-actions .btn:focus-visible i {
   color: var(--nhg-accent);
+}
+
+body.products-page.product-detail-page .toughened-spec-actions .btn:hover,
+body.products-page.product-detail-page .toughened-spec-actions .btn:focus-visible {
+  transform: translateY(-2px);
+  background: rgba(31, 63, 143, 0.12);
+  border-color: rgba(31, 63, 143, 0.34);
+  box-shadow: 0 16px 28px rgba(19, 37, 69, 0.12);
 }
 
 body.products-page.product-detail-page .laminated-cta-actions {
