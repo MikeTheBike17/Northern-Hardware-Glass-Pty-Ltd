@@ -72,9 +72,9 @@ main {
 
 
 
-/* ─────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    HEADER WRAPPER
-───────────────────────────────────────── */
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 /* Ensure header is always above background layer */
 .site-header {
   position: relative;
@@ -84,9 +84,9 @@ main {
 
 
 
-/* ─────────────────────────────────────────
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
    TOP BAR (BLUE STRIP)
-───────────────────────────────────────── */
+â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 .top-bar {
   background: #252e9a;
   color: #ffffff;
@@ -420,7 +420,7 @@ main {
   color: #e5e7eb;
   padding: 3.5rem 1rem;
 
-  /* ✅ gradient overlay + image (colour-graded look) */
+  /* âœ… gradient overlay + image (colour-graded look) */
   background-image:
     linear-gradient(
       135deg,
@@ -828,7 +828,7 @@ body.has-fixed-bg::before {
   inset: 0;
   z-index: 0;             /* background layer */
   pointer-events: none;
-  background: url("./images/OUTSIDE-MIDRAND-1.JPG") center/cover no-repeat;
+  background: url("./images/OUTSIDE-MIDRAND-1.webp") center/cover no-repeat;
 }
 
 /* Force header above background + above main */
@@ -858,7 +858,7 @@ body.has-fixed-bg .site-footer {
 }
 
 .image-background-banner-scroll{
-  background-image: url('./images/OUTSIDE-MIDRAND-1.JPG');
+  background-image: url('./images/OUTSIDE-MIDRAND-1.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -882,7 +882,7 @@ body.has-fixed-bg .site-footer {
   inset: 0;
   z-index: -1;
 
-  background-image: url('./images/OUTSIDE-MIDRAND-1.JPG');
+  background-image: url('./images/OUTSIDE-MIDRAND-1.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1095,7 +1095,7 @@ body.has-fixed-bg .site-footer {
 
 
 
-/* ───────── HOME – SCROLL HEADING ANIMATION ───────── */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€ HOME â€“ SCROLL HEADING ANIMATION â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 /* Wrapper */
 .product-hero-home {
   display: flex;
@@ -1268,19 +1268,19 @@ body.has-fixed-bg .site-footer {
 
 /* Background images */
 .category-glass{
-  background-image: url("images/Laminated-glass.png");
+  background-image: url("images/Laminated-glass.webp");
 }
 .category-architectural{
-  background-image: url("images/Toughened-glass.jpg");
+  background-image: url("images/Toughened-glass.webp");
 }
 .category-interior{
-  background-image: url("images/Double-glazing.jpg");
+  background-image: url("images/Double-glazing.webp");
 }
 .category-specialised{
-  background-image: url("images/Special.png");
+  background-image: url("images/Special.webp");
 }
 .category-aluminium{
-  background-image: url("images/aluminium-hardware.jpg");
+  background-image: url("images/aluminium-hardware.webp");
 }
 
 /* CTA button aligned to grid left edge (bottom-left card alignment) */
@@ -1342,19 +1342,19 @@ body.has-fixed-bg .site-footer {
     SERVICES PAGE
 --------------------- */
 
-/* -------- Memberships & Certificates – CARD GRID -------- */
+/* -------- Memberships & Certificates â€“ CARD GRID -------- */
 .why-section {
   margin-top: 2.5rem;
 }
 
-/* Grid for the “Why choose…” cards */
+/* Grid for the â€œWhy chooseâ€¦â€ cards */
 .why-cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 
-/* Base “why” card (separate from .card used elsewhere) */
+/* Base â€œwhyâ€ card (separate from .card used elsewhere) */
 .why-card {
   position: relative;
   background: #ffffff;
@@ -1543,7 +1543,7 @@ body.has-fixed-bg .site-footer {
   transition: transform 200ms ease;
   margin-bottom: 2rem;
 
-  /* ✅ height behavior */
+  /* âœ… height behavior */
   height: auto;         
   min-height: 0;        
 }
@@ -1581,7 +1581,7 @@ body.has-fixed-bg .site-footer {
 
 
 /* =======================================================
-   EDGE PROFILES (HIGHLIGHT + GALLERY) — CLEAN DROP-IN
+   EDGE PROFILES (HIGHLIGHT + GALLERY) â€” CLEAN DROP-IN
    - Text left, image right (desktop + mobile)
    - No grid conflicts, no negative margins, no weird offsets
    ======================================================= */
@@ -1703,7 +1703,7 @@ body.has-fixed-bg .site-footer {
 }
 
 /* -------------------------------------------------- */
-/* Existing image container (UNCHANGED — kept intact) */
+/* Existing image container (UNCHANGED â€” kept intact) */
 /* -------------------------------------------------- */
 .services-card-image.centered {
   display: flex;
@@ -1774,7 +1774,7 @@ body.has-fixed-bg .site-footer {
       rgba(184, 189, 202, 0.7),
       rgba(0, 76, 255, 0.5)
     ),
-    url("images/Products2-wallpaper.png");
+    url("images/Products2-wallpaper.webp");
 
   background-repeat: no-repeat;
   background-size: cover;
@@ -1848,7 +1848,7 @@ body.has-fixed-bg .site-footer {
 
 
 
-/* ───────── PRODUCT CATEGORY SECTION ───────── */
+/* â”€â”€â”€â”€â”€â”€â”€â”€â”€ PRODUCT CATEGORY SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
 /* Grid: 2 per row desktop, 1 per row mobile */
 .product-category-grid-2 {
   display: grid;
@@ -2084,19 +2084,19 @@ body.has-fixed-bg .site-footer {
 
 /* Background images per category (reuse your existing classes) */
 .category-glass {
-  background-image: url("images/Laminated-glass.png");
+  background-image: url("images/Laminated-glass.webp");
 }
 .category-architectural {
-  background-image: url("images/Toughened-glass.jpg");
+  background-image: url("images/Toughened-glass.webp");
 }
 .category-interior {
-  background-image: url("images/Double-glazing.jpg");
+  background-image: url("images/Double-glazing.webp");
 }
 .category-specialised {
-  background-image: url("images/Special.png");
+  background-image: url("images/Special.webp");
 }
 .category-aluminium {
-  background-image: url("images/aluminium-hardware.jpg");
+  background-image: url("images/aluminium-hardware.webp");
 }
 
 
@@ -2133,7 +2133,7 @@ body.has-fixed-bg .site-footer {
       135deg,
       rgba(50, 50, 65, 0.6),
       rgba(7, 13, 22, 0.5)
-    ), url("images/Contact-Background.jpg");
+    ), url("images/Contact-Background.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2221,7 +2221,7 @@ body.has-fixed-bg .site-footer {
 
 /* Arrow */
 .location-card::after {
-  content: "▾";
+  content: "â–¾";
   position: absolute;
   top: 0.6rem;
   right: 0.3rem;
@@ -2245,7 +2245,7 @@ body.has-fixed-bg .site-footer {
   opacity: 0.9;
   transform: translateX(0);
 }
-/* Rotate 180° on hover/focus */
+/* Rotate 180Â° on hover/focus */
 .location-card:hover::after,
 .location-card:focus-within::after{
   transform: rotate(180deg);
@@ -2797,7 +2797,7 @@ body.has-fixed-bg .site-footer {
   align-items: center;     
   justify-content: center; 
 
-  background-image: url("images/Laminated-glass-background.png");
+  background-image: url("images/Laminated-glass-background.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2846,7 +2846,7 @@ body.has-fixed-bg .site-footer {
   align-items: center;     
   justify-content: center; 
 
-  background-image: url("images/Toughened-glass-background.jpg");
+  background-image: url("images/Toughened-glass-background.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2897,7 +2897,7 @@ body.has-fixed-bg .site-footer {
   align-items: center;     /* centers the blocks horizontally */
   justify-content: center; /* centers the whole stack vertically */
 
-  background-image: url("images/DoubleGlaze-Background.jpg");
+  background-image: url("images/DoubleGlaze-Background.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3007,7 +3007,7 @@ body.has-fixed-bg .site-footer {
   align-items: center;     /* centers the blocks horizontally */
   justify-content: center; /* centers the whole stack vertically */
 
-  background-image: url("images/Special-Wallpaper.jpeg");
+  background-image: url("images/Special-Wallpaper.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3063,7 +3063,7 @@ body.has-fixed-bg .site-footer {
   align-items: center;    
   justify-content: center; 
 
-  background-image: url("images/aluminium-background.jpg");
+  background-image: url("images/aluminium-background.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -3154,7 +3154,7 @@ body.has-fixed-bg .site-footer {
 
 /* Tick Style */
 .product-intro li::before {
-  content: "✔";                 
+  content: "âœ”";                 
   position: center;
   left: 0;
   top: 0.1rem;
@@ -3442,7 +3442,7 @@ body.has-fixed-bg .site-footer {
 }
 
 .product-page-card.is-collapsible h2::after {
-  content: "▾";
+  content: "â–¾";
   position: absolute;
   right: 0.25rem;
   top: 50%;
@@ -8141,7 +8141,7 @@ body.products-page .products-hero-overlay {
 body.products-page .products-hero-bg {
   background:
     linear-gradient(135deg, rgba(21, 46, 88, 0.2), rgba(7, 13, 22, 0.52)),
-    url("images/Products2-wallpaper.png") center/cover no-repeat;
+    url("images/Products2-wallpaper.webp") center/cover no-repeat;
   transform: scale(1.03);
 }
 
@@ -8738,7 +8738,7 @@ body.products-page.laminated-page .laminated-hero-overlay {
 body.products-page.laminated-page .laminated-hero-bg {
   background:
     linear-gradient(135deg, rgba(21, 46, 88, 0.16), rgba(7, 13, 22, 0.58)),
-    url("images/Laminated-glass-background.png") center/cover no-repeat;
+    url("images/Laminated-glass-background.webp") center/cover no-repeat;
   transform: scale(1.03);
 }
 
@@ -9512,25 +9512,25 @@ body.products-page.laminated-detail-page .footer-cta {
 body.products-page.toughened-page .laminated-hero-bg {
   background:
     linear-gradient(135deg, rgba(19, 45, 88, 0.18), rgba(7, 13, 22, 0.58)),
-    url("images/Toughened-glass-background.jpg") center/cover no-repeat;
+    url("images/Toughened-glass-background.webp") center/cover no-repeat;
 }
 
 body.products-page.special-page .laminated-hero-bg {
   background:
     linear-gradient(135deg, rgba(26, 49, 84, 0.18), rgba(7, 13, 22, 0.58)),
-    url("images/Special-Wallpaper.jpeg") center/cover no-repeat;
+    url("images/Special-Wallpaper.webp") center/cover no-repeat;
 }
 
 body.products-page.aluminium-page .laminated-hero-bg {
   background:
     linear-gradient(135deg, rgba(23, 47, 84, 0.18), rgba(7, 13, 22, 0.58)),
-    url("images/aluminium-background.jpg") center/cover no-repeat;
+    url("images/aluminium-background.webp") center/cover no-repeat;
 }
 
 body.products-page.double-glaze-page .laminated-hero-bg {
   background:
     linear-gradient(135deg, rgba(19, 47, 90, 0.18), rgba(7, 13, 22, 0.58)),
-    url("images/DoubleGlaze-Background.jpg") center/cover no-repeat;
+    url("images/DoubleGlaze-Background.webp") center/cover no-repeat;
 }
 
 body.products-page.product-detail-page .detail-inline-media {
@@ -10933,7 +10933,7 @@ body.contact-page-view .contact-hero-overlay {
 body.contact-page-view .contact-hero-bg {
   background:
     linear-gradient(135deg, rgba(21, 46, 88, 0.14), rgba(7, 13, 22, 0.54)),
-    url("images/Contact-Background.jpg") center/cover no-repeat;
+    url("images/Contact-Background.webp") center/cover no-repeat;
   transform: scale(1.03);
 }
 
