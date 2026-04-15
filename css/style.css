@@ -9158,20 +9158,20 @@ body.products-page.laminated-page .laminated-summary-grid {
   gap: 1.25rem;
 }
 
-:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-section {
+:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-section {
   padding-top: 0.75rem;
 }
 
-:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-intro {
+:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-intro {
   margin-bottom: 1.9rem;
 }
 
-:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-stack {
+:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-stack {
   display: grid;
   gap: 1.2rem;
 }
 
-:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-card {
+:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-card {
   overflow: hidden;
   border-radius: 24px;
   background: #ffffff;
@@ -9181,7 +9181,7 @@ body.products-page.laminated-page .laminated-summary-grid {
     inset 0 1px 0 rgba(255, 255, 255, 0.64);
 }
 
-:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-titlebar {
+:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-titlebar {
   margin: 0;
   padding: 1rem 1.25rem;
   background: linear-gradient(90deg, #1e40af, #4f7bff);
@@ -9192,18 +9192,18 @@ body.products-page.laminated-page .laminated-summary-grid {
   line-height: 1.4;
 }
 
-:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table-shell {
+:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table-shell {
   padding: 0 1rem 1rem;
 }
 
-:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table {
+:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table {
   width: 100%;
   border-collapse: collapse;
   background: #ffffff;
 }
 
-:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table th,
-:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table td {
+:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table th,
+:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table td {
   border: 1px solid #8c8c8c;
   padding: 0.6rem 0.45rem;
   font-size: 0.92rem;
@@ -9211,42 +9211,79 @@ body.products-page.laminated-page .laminated-summary-grid {
   vertical-align: middle;
 }
 
-:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table thead tr:first-child th {
+:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table thead tr:first-child th {
   background: #f1f1f1;
   font-weight: 800;
 }
 
-:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table thead tr:nth-child(2) th {
+:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table thead tr:nth-child(2) th {
   background: #f8f8f8;
   font-weight: 700;
 }
 
-:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table th,
-:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table td {
+:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table th,
+:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table td {
   overflow-wrap: anywhere;
 }
 
-:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody td:first-child {
+:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody td:first-child {
   text-align: left;
   font-weight: 700;
   background: linear-gradient(90deg, #1e40af, #4f7bff);
   color: #ffffff;
 }
 
-:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody tr.highlight-row td {
+:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody tr.highlight-row td {
   background: #fff176;
 }
 
-:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody tr.highlight-row td:first-child {
+:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody tr.highlight-row td:first-child {
   background: rgba(15, 66, 236, 0.84);
   color: #ffffff;
 }
 
-:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-note {
+:is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-note {
   margin: 0;
   padding: 0 1rem 1rem;
   color: #6b7280;
   font-size: 0.92rem;
+}
+
+body.bullet-resistant-detail-page .bullet-resistant-performance-table tbody td.level-cell {
+  position: relative;
+  min-width: 112px;
+  min-height: 80px;
+  padding: 0.45rem;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+body.bullet-resistant-detail-page .bullet-resistant-performance-table .level-label {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+body.bullet-resistant-detail-page .bullet-resistant-performance-table .weapon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  line-height: 1;
+  color: #141414;
+}
+
+body.bullet-resistant-detail-page .bullet-resistant-performance-table tbody td.left {
+  text-align: left;
 }
 
 body.products-page.laminated-page .laminated-info-card > * {
@@ -9581,17 +9618,13 @@ body.products-page.product-detail-page .double-glaze-config-media {
   }
 }
 
-body.products-page.product-detail-page .double-glaze-performance-card h2 {
-  margin-bottom: 1rem;
-}
-
 body.products-page.product-detail-page .double-glaze-table-wrap {
   width: 100%;
   overflow-x: auto;
-  background: #ffffff;
-  padding: 8px;
-  border-radius: 18px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 body.products-page.product-detail-page .double-glaze-performance-table {
@@ -9717,21 +9750,6 @@ body.products-page.product-detail-page .double-glaze-performance-table tbody tr:
 }
 
 @media (min-width: 769px) {
-  body.products-page.product-detail-page .double-glaze-performance-card {
-    background: transparent;
-    border-color: transparent;
-    box-shadow: none;
-    backdrop-filter: none;
-  }
-
-  body.products-page.product-detail-page .double-glaze-table-wrap {
-    overflow-x: visible;
-    background: transparent;
-    padding: 0;
-    border-radius: 0;
-    box-shadow: none;
-  }
-
   body.products-page.product-detail-page .double-glaze-performance-table {
     min-width: 0;
     width: 100%;
@@ -9955,21 +9973,21 @@ body.products-page.product-detail-page .laminated-cta-actions .btn-cta-solid {
 }
 
 @media (max-width: 980px) {
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table-shell {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table-shell {
     padding: 0.9rem;
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table,
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table thead,
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody,
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tr,
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table th,
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table td {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table,
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table thead,
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody,
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tr,
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table th,
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table td {
     display: block;
     width: 100%;
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table thead {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table thead {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -9981,12 +9999,12 @@ body.products-page.product-detail-page .laminated-cta-actions .btn-cta-solid {
     border: 0;
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody {
     display: grid;
     gap: 0.85rem;
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody tr {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody tr {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 0.55rem;
@@ -9997,7 +10015,7 @@ body.products-page.product-detail-page .laminated-cta-actions .btn-cta-solid {
     box-shadow: 0 14px 28px rgba(14, 39, 72, 0.08);
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody td {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody td {
     min-width: 0;
     min-height: 100%;
     padding: 0.7rem 0.8rem;
@@ -10008,7 +10026,7 @@ body.products-page.product-detail-page .laminated-cta-actions .btn-cta-solid {
     line-height: 1.45;
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody td::before {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody td::before {
     display: block;
     margin-bottom: 0.22rem;
     font-size: 0.7rem;
@@ -10018,67 +10036,111 @@ body.products-page.product-detail-page .laminated-cta-actions .btn-cta-solid {
     color: #466597;
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody td:first-child {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody td:first-child {
     grid-column: 1 / -1;
     padding: 0.95rem 1rem;
     border-color: rgba(30, 64, 175, 0.4);
     border-radius: 16px;
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody td:first-child::before {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody td:first-child::before {
     content: none;
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody td:nth-child(2)::before {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody td:nth-child(2)::before {
     content: "Transmission";
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody td:nth-child(3)::before {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody td:nth-child(3)::before {
     content: "Light reflection outside";
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody td:nth-child(4)::before {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody td:nth-child(4)::before {
     content: "Light reflection inside";
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody td:nth-child(5)::before {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody td:nth-child(5)::before {
     content: "Direct transmission";
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody td:nth-child(6)::before {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody td:nth-child(6)::before {
     content: "Absorption";
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody td:nth-child(7)::before {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody td:nth-child(7)::before {
     content: "Solar reflection outside";
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody td:nth-child(8)::before {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody td:nth-child(8)::before {
     content: "Solar factor (g)";
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody td:nth-child(9)::before {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody td:nth-child(9)::before {
     content: "Shading coeff";
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody td:nth-child(10)::before {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody td:nth-child(10)::before {
     content: "U-value";
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody td:nth-child(11)::before {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody td:nth-child(11)::before {
     content: "SHGC";
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody tr.highlight-row {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody tr.highlight-row {
     background: linear-gradient(180deg, rgba(255, 241, 118, 0.4), rgba(255, 255, 255, 0.96));
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody tr.highlight-row td {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody tr.highlight-row td {
     background: rgba(255, 241, 118, 0.86);
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table tbody tr.highlight-row td:first-child {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table tbody tr.highlight-row td:first-child {
     background: rgba(15, 66, 236, 0.84);
+  }
+
+  body.bullet-resistant-detail-page .bullet-resistant-performance-table tbody td:nth-child(2)::before {
+    content: "Ammunition";
+  }
+
+  body.bullet-resistant-detail-page .bullet-resistant-performance-table tbody td:nth-child(3)::before {
+    content: "Nominal bullet mass";
+  }
+
+  body.bullet-resistant-detail-page .bullet-resistant-performance-table tbody td:nth-child(4)::before {
+    content: "Required velocity";
+  }
+
+  body.bullet-resistant-detail-page .bullet-resistant-performance-table tbody td:nth-child(5)::before {
+    content: "PRL designation";
+  }
+
+  body.bullet-resistant-detail-page .bullet-resistant-performance-table tbody td:nth-child(6)::before {
+    content: "Thickness";
+  }
+
+  body.bullet-resistant-detail-page .bullet-resistant-performance-table tbody td:nth-child(7)::before {
+    content: "Weight";
+  }
+
+  body.bullet-resistant-detail-page .bullet-resistant-performance-table tbody td:nth-child(8)::before {
+    content: "Number of shots";
+  }
+
+  body.bullet-resistant-detail-page .bullet-resistant-performance-table tbody td.level-cell {
+    min-width: 96px;
+    min-height: 72px;
+    padding: 0.4rem;
+  }
+
+  body.bullet-resistant-detail-page .bullet-resistant-performance-table .level-label {
+    top: 7px;
+    left: 8px;
+    font-size: 0.66rem;
+  }
+
+  body.bullet-resistant-detail-page .bullet-resistant-performance-table .weapon {
+    font-size: 1.7rem;
   }
 }
 
@@ -10135,13 +10197,13 @@ body.products-page.product-detail-page .laminated-cta-actions .btn-cta-solid {
     padding: 1.2rem 1.2rem 1.3rem;
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-titlebar {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-titlebar {
     padding: 0.95rem 1rem;
     font-size: 0.98rem;
   }
 
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-table-shell,
-  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page) .laminated-performance-note {
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-table-shell,
+  :is(body.products-page.laminated-page, body.products-page.product-detail-page.double-glaze-detail-page, body.bullet-resistant-detail-page) .laminated-performance-note {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
   }
