@@ -4,406 +4,238 @@
   <meta name="author" content="Michael Martin Lehman">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Northern Hardware & Glass (Pty) Ltd - Services</title>
+  <title>Northern Hardware &amp; Glass (Pty) Ltd - Aluminium &amp; Hardware</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
   <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-  integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-  crossorigin="anonymous"
-  referrerpolicy="no-referrer"/>
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
   <script src="js/main.js" defer></script>
 </head>
-<body>
-  <header class="site-header">
-    <!-- top bar-->
-    <div class="top-bar">
-      <div class="top-bar-inner">
-        <div class="top-bar-left">
-          <span class="top-label">Contact Centre:</span>
-          <a href="tel:0113140365">011 314 0365</a>
-        </div>
+<body class="products-page laminated-page aluminium-page">
+  <main class="products-shell" id="aluminium-top">
+    <section class="laminated-hero">
+      <header class="site-header">
+        <div class="hero-header-shell">
+          <div class="hero-header-main">
+            <a href="index.html" class="logo" aria-label="Northern Hardware &amp; Glass home">
+              <img src="assets/NHG-Logo-HD.jpeg" alt="Northern Hardware &amp; Glass Logo" />
+            </a>
 
-        <div class="top-bar-center">
-          <span class="top-label">General enquiries:</span>
-          <a class="email js-email"
-            data-email-b64="X832xfftQzoHaRVLM0ktd7nT-fWjjJJbu0"
-            href="#"
-            rel="nofollow, noindex"><b>Click Here</b>
-          </a>
-        </div>
+            <div class="hero-header-contact">
+              <div class="hero-contact-line">
+                <span class="top-label">General enquiries:</span>
+                <a class="email js-email" data-email-b64="X832xfftQzoHaRVLM0ktd7nT-fWjjJJbu0" href="#" rel="nofollow, noindex"><b>Click Here</b></a>
+                <span class="top-label">General enquiries:</span>
+                <a class="email js-email" data-email-b64="CECWOkme4jW2wADejCisU1JMauVsEIJyufE" href="#" rel="nofollow, noindex"><b>Click Here</b></a>
+              </div>
+              <div class="hero-contact-line">
+                <span class="top-label">Contact Centre:</span>
+                <a href="tel:0113140365">011 314 0365</a>
+              </div>
+            </div>
 
-        <div class="top-bar-right">
-          <!-- Social media icons (real icons now) -->
-          <a href="https://web.facebook.com/profile.php?id=61587085708063&mibextid=wwXIfr&rdid=TPoWIno0lVODcUVx&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1AD1Rg98R5%2F%3Fmibextid%3DwwXIfr%26_rdc%3D1%26_rdr#" target="_blank" class="social-icon" aria-label="Facebook">
-            <i class="fab fa-facebook-f"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/brad-lehman-35506b3ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="social-icon" aria-label="LinkedIn">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://www.instagram.com/northern_hardware_glass?igsh=MTcwcTlveHU0bWswaw%3D%3D" target="_blank" class="social-icon" aria-label="Instagram">
-            <i class="fab fa-instagram"></i>
-          </a>
+            <div class="hero-header-actions">
+              <div class="hero-header-socials">
+                <a href="https://web.facebook.com/profile.php?id=61587085708063&amp;mibextid=wwXIfr&amp;rdid=TPoWIno0lVODcUVx&amp;share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1AD1Rg98R5%2F%3Fmibextid%3DwwXIfr%26_rdc%3D1%26_rdr#" target="_blank" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/brad-lehman-35506b3ab?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/northern_hardware_glass?igsh=MTcwcTlveHU0bWswaw%3D%3D" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              </div>
+
+              <button class="nav-toggle" id="navToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="siteMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+
+          <nav class="navbar" id="siteMenu" data-flat-nav="true">
+            <ul class="nav-links" id="mainNav">
+              <li class="nav-item dropdown has-submenu">
+                <a class="nav-main-link" href="index.html" aria-haspopup="true" aria-expanded="false">HOME</a>
+                <ul class="dropdown-menu">
+                  <li><a href="index.html#about-us">Specialties</a></li>
+                  <li><a href="index.html#Gallery">Gallery</a></li>
+                  <li><a href="index.html#socials">Socials</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown has-submenu">
+                <a class="nav-main-link" href="services.html#services-top" aria-haspopup="true" aria-expanded="false">ABOUT US</a>
+                <ul class="dropdown-menu">
+                  <li><a href="services.html#Why">Why NH&amp;G</a></li>
+                  <li><a href="services.html#Processing">Processing</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-main-link" href="terms.html">TERMS</a>
+              </li>
+              <li class="nav-item dropdown has-submenu">
+                <a class="nav-main-link" href="products.html" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
+                <ul class="dropdown-menu">
+                  <li><a href="LamGlass.html">Laminated Glass</a></li>
+                  <li><a href="ToughGlass.html">Toughened Glass</a></li>
+                  <li><a href="DoubleGlaze.html">Double Glazing Units</a></li>
+                  <li><a href="Special.html">Specialised Products</a></li>
+                  <li><a href="Aluminium.html">Aluminium &amp; Hardware</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-main-link" href="contact.html">CONTACT US</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <div class="laminated-hero-stage">
+        <div class="laminated-hero-bg" aria-hidden="true"></div>
+        <div class="laminated-hero-overlay" aria-hidden="true"></div>
+
+        <div class="home-container laminated-hero-grid">
+          <div class="laminated-hero-copy glass-panel" data-reveal="up">
+            <p class="section-kicker">Aluminium &amp; Hardware Range</p>
+            <h1>Reliable aluminium systems and premium glass hardware for modern glazing applications.</h1>
+            <p class="laminated-hero-text">
+              Our aluminium and hardware range is selected to support strength, precision, and long-term performance across residential, commercial, and specialised glass installations. Explore aluminium profiles, accessories, and shower hardware solutions designed to work seamlessly with our glass systems.
+            </p>
+            <div class="laminated-hero-actions">
+              <a href="#aluminium-catalog" class="btn btn-primary">Explore Aluminium &amp; Hardware</a>
+              <a href="contact.html#enquiry" class="btn btn-secondary">Request a Quote</a>
+            </div>
+          </div>
+
+          <aside class="laminated-hero-panel glass-panel" data-reveal="up" aria-label="Why choose our aluminium and hardware">
+            <p class="panel-eyebrow">Why Choose Our Range</p>
+            <ul class="laminated-benefits">
+              <li>Designed to support glass safely and securely in fixed and moving applications.</li>
+              <li>Suitable for interior, exterior, coastal, and high-humidity environments.</li>
+              <li>Selected to work with laminated, toughened, and insulated glass systems.</li>
+              <li>Available in finishes that complement contemporary architectural glazing.</li>
+            </ul>
+          </aside>
         </div>
       </div>
-    </div>
+    </section>
 
-    
-    <!-- NAVBAR -->
-    <nav class="navbar">
-      <div class="navbar-inner">
-        <div class="navbar-left">
-          <!-- Logo -->
-          <a href="index.html" class="logo">
-            <img src="assets/NHG-Logo-hd.webp" alt="Northern Hardware & Glass Logo" />
-            <span>NORTHERN HARDWARE & GLASS (PTY) LTD</span>
-          </a>
+    <section class="home-section laminated-catalog-section" id="aluminium-catalog">
+      <div class="home-container">
+        <div class="laminated-section-grid">
+          <div class="section-heading" data-reveal="up">
+            <p class="section-kicker">Product Selection</p>
+            <h2>Choose the aluminium or hardware solution that best suits the project.</h2>
+            <p class="section-copy">
+              Each option below has its own dedicated detail page with fuller product information, applications, and enquiry guidance.
+            </p>
+          </div>
+
+          <aside class="laminated-selection-panel glass-panel" data-reveal="up">
+            <article class="laminated-stat">
+              <strong>2 Core Product Groups</strong>
+              <span>Supporting glazing systems with structural aluminium components and precision shower hardware.</span>
+            </article>
+            <article class="laminated-stat">
+              <strong>Glass-System Compatible</strong>
+              <span>Selected to work seamlessly with laminated, toughened, and double-glazed products across multiple applications.</span>
+            </article>
+            <article class="laminated-stat">
+              <strong>Built For Performance</strong>
+              <span>Chosen for durability, ease of installation, corrosion resistance, and clean architectural finishing.</span>
+            </article>
+          </aside>
         </div>
 
-        <!-- Main links -->
-        <ul class="nav-links" id="mainNav">
-          <!-- HOME -->
-          <li class="nav-item dropdown has-submenu">
-            <a class="nav-main-link" href="index.html" aria-haspopup="true" aria-expanded="false">HOME</a>
-            <ul class="dropdown-menu">
-              <li><a href="index.html#about-us">Specialties</a></li>
-              <li><a href="index.html#Gallery">Gallery</a></li>
-              <li><a href="index.html#socials">Socials</a></li>
-            </ul>
-          </li>
+        <div class="laminated-card-grid">
+          <article class="laminated-product-card glass-panel" data-reveal="card">
+            <a class="laminated-product-media" href="aluminium-profiles-accessories.html" aria-label="Read more about aluminium profiles and accessories">
+              <img src="assets/aluminium/aluminium.jpg" alt="Aluminium profiles and accessories" loading="lazy" />
+            </a>
+            <div class="laminated-product-body">
+              <p class="laminated-product-label">System Components</p>
+              <h2><a href="aluminium-profiles-accessories.html">Aluminium Profiles &amp; Accessories</a></h2>
+              <p>Precision aluminium components supplied for glazing systems, partitions, balustrades, enclosures, and architectural installations.</p>
+              <a href="aluminium-profiles-accessories.html" class="btn btn-primary laminated-card-link">Read More</a>
+            </div>
+          </article>
 
-          <!-- SERVICES -->
-          <li class="nav-item dropdown has-submenu">
-            <a class="nav-main-link" href="services.html" aria-haspopup="true" aria-expanded="false">ABOUT US</a>
-            <ul class="dropdown-menu">
-              <li><a href="services.html#Why">Why NH&amp;G</a></li>
-              <li><a href="services.html#Processing">Processing</a></li>
-              <li><a href="services.html#T&amp;Cs">Terms &amp; Conditions</a></li>
-            </ul>
-          </li>
-
-          <!-- PRODUCTS -->
-          <li class="nav-item dropdown has-submenu">
-            <a class="nav-main-link" href="products.html" aria-haspopup="true" aria-expanded="false">PRODUCTS</a>
-            <ul class="dropdown-menu">
-              <li><a href="LamGlass.html">Laminated Glass</a></li>
-              <li><a href="ToughGlass.html">Toughened Glass</a></li>
-              <li><a href="DoubleGlaze.html">Double Glazing Units</a></li>
-              <li><a href="Special.html">Specialised Products</a></li>
-              <li><a href="Aluminium.html">Aluminium & Hardware</a></li>
-            </ul>
-          </li>
-
-          <!-- CONTACT -->
-          <li class="nav-item">
-            <a class="nav-main-link" href="contact.html">CONTACT US</a>
-          </li>
-        </ul>
+          <article class="laminated-product-card glass-panel" data-reveal="card">
+            <a class="laminated-product-media" href="shower-hardware.html" aria-label="Read more about shower hardware">
+              <img src="assets/aluminium/hardware.webp" alt="Shower hardware" loading="lazy" />
+            </a>
+            <div class="laminated-product-body">
+              <p class="laminated-product-label">Architectural Hardware</p>
+              <h2><a href="shower-hardware.html">Shower Hardware</a></h2>
+              <p>Premium Schematech hardware systems for frameless and semi-frameless shower installations built for precision and durability.</p>
+              <a href="shower-hardware.html" class="btn btn-primary laminated-card-link">Read More</a>
+            </div>
+          </article>
+        </div>
       </div>
-    </nav>
-  </header>
-  
-<main>
-  <section class="section why-section-aluminium">
-    <div class="prod-section-header">
-      <h1>Aluminium & Hardware</h1>
-      <p>
-        Our aluminium and glass hardware range is designed to deliver strength, precision, and long-term reliability 
-        across residential, commercial, and industrial applications. From framing systems and fittings to specialised 
-        hardware solutions, we supply components that ensure durability and a clean professional finish to meet 
-        demanding performance requirements while complementing modern architectural and functional glass systems.
-      </p>
-    </div>
-    <section class="product-intro">
-      <h2>Why Choose Our Aluminium & Glass Hardware?</h2>
-      <ul>
-        <li>Engineered to support glass safely and securely in fixed and moving applications.</li>
-        <li>Suitable for indoor and outdoor use, including coastal and high-humidity environments.</li>
-        <li>Designed to work seamlessly with laminated, toughened, and insulated glass systems.</li>
-        <li>Available in a range of finishes to suit architectural designs.</li>
-      </ul>
     </section>
-  </section>
 
-  <!-- LOGO BRIDGE (products pages) -->
-  <section class="logo-bridge-2" aria-label="Northern Hardware & Glass logo">
-    <div class="logo-bridge-inner-2">
-      <img
-        src="assets/NHG-Logo-hd.webp"
-        alt="Northern Hardware & Glass (Pty) Ltd logo"
-        class="logo-bridge-img-2"
-      />
-    </div>
-  </section>
-  
-  <section class="contact-page">
-    <section class="page">
-      <section class="product-page-grid" aria-label="aluminium Products">
-
-        <!-- Aluminium Profiles & Accessories -->
-        <article class="product-page-card is-collapsible" tabindex="0" id="aluminium">
-          <div class="product-card-shell">
-            <!-- LEFT -->
-            <div class="product-card-left">
-              <h2>Aluminium Profiles &amp; Accessories</h2>
-
-              <div class="product-card-body">
-                <p>
-                  We supply a comprehensive range of high-quality square aluminium profiles and accessories specifically selected to
-                  support laminated and toughened glass installations across residential, commercial, and specialised applications.
-                  All aluminium supplied by Northern Hardware &amp; Glass is chosen for strength, precision, and long-term durability.<br><br>
-                  Our aluminium range is designed to integrate seamlessly with our glass products, including <b>laminated safety glass,
-                  toughened glass, balustrading systems, shopfronts, shower enclosures, partitions, mirrors, and specialised installations.</b>
-                </p><br>
-
-                <ul>
-                  <li>Compatible with laminated, toughened, and double-glazed glass units.</li>
-                  <li>Precision-engineered for strength, stability, and ease of installation</li>
-                  <li>Corrosion-resistant aluminium, suitable for interior and exterior use.</li>
-                  <li>Available in multiple finishes, including natural, anodised, and powder-coated options.</li>
-                  <li>Ideal for shopfronts, windows, doors, balustrades, partitions, shower enclosures, and display systems.</li><br>
-                  <li><b>Aluminium Profiles &amp; Components Supplied:</b></li>
-                  <ul>
-                    <li>Square Aluminium Profiles</li>
-                    <li>Square Channels &amp; U-Profiles</li>
-                    <li>Square Frames &amp; Trims</li>
-                    <li>Mounting &amp; Fixing Accessories</li>
-                    <li>Glazing Support Components</li>
-                  </ul>
-                </ul><br>
-
-                <p>
-                  Our aluminium stock is carefully selected to ensure <b>structural reliability, ease of installation, and aesthetic consistency</b> across all glass systems.
-                </p><br>
-              </div>
-
-              <!-- CTA -->
-              <div class="product-card-cta">
-                <p><b>Northern Hardware &amp; Glass (Pty) Ltd.</b></p>
-                <p>If you would like to request a quote or more information, please contact us.</p>
-                <a href="contact.html" class="contact-us-products-btn">Contact Us</a>
-              </div>
-            </div>
-
-            <!-- RIGHT SECTION -->
-            <div class="product-card-media" aria-label="Aluminium Profiles &amp; Accessories photo">
-              <img src="assets/aluminium/aluminium.jpg" alt="Aluminium Profiles &amp; Accessories">
-            </div>
-          </div>
+    <section class="home-section laminated-summary-section">
+      <div class="home-container laminated-summary-grid">
+        <article class="laminated-info-card glass-panel" data-reveal="up">
+          <p class="section-kicker">About The Range</p>
+          <h2>Aluminium and hardware selected to support safe, efficient, and polished glass installations.</h2>
+          <p>
+            Our aluminium and hardware products are chosen to support the practical demands of glazing installations across residential, commercial, and specialised work. From structural profiles and fixing accessories to premium hardware systems, the range is intended to deliver compatibility, reliability, and a cleaner finished result.
+          </p>
+          <p>
+            We also work with trusted suppliers such as Schematech for premium shower hardware, allowing us to pair our glass expertise with proven components for frameless and semi-frameless systems.
+          </p>
         </article>
 
-
-        <!-- Shower Hardware -->
-        <article class="product-page-card is-collapsible" tabindex="0" id="shower-hardware">
-          <div class="product-card-shell">
-            <!-- LEFT -->
-            <div class="product-card-left">
-              <h2>Shower Hardware</h2>
-
-              <div class="product-card-body"> 
-                <p>
-                  Our shower hardware range features premium architectural components supplied by 
-                  <b>Schematech</b>, a leading manufacturer of high-performance glass hardware systems. 
-                  Designed specifically for laminated and toughened glass applications, Schematech hardware 
-                  ensures strength, durability, and smooth operation in demanding wet environments.<br><br>
-
-                  By combining our glass expertise with Schematech’s precision-engineered hardware, 
-                  we deliver complete <b>frameless and semi-frameless shower solutions</b> built for 
-                  safety, stability, and long-term performance.
-                </p>
-
-                <p>
-                  Through our partnership with Schematech, we are able to supply a comprehensive range of 
-                  architectural glass hardware, including:
-                </p>
-
-                <ul>
-                  <li><b>Shower Hinges</b> – Wall-to-glass, glass-to-glass, pivot, self-rising, and adjustable systems</li>
-                  <li><b>Shower Clamps & Brackets</b> – Bevel, flat, dome and tee configurations</li>
-                  <li><b>Handles, Knobs & Towel Rails</b> – Pull handles, flush handles, square and round designs</li>
-                  <li><b>Support Arms & Stabiliser Bars</b> – Adjustable wall and glass mount systems</li>
-                  <li><b>Metal Profiles</b> – U-channels, compensation channels, flat bars, header rails</li>
-                  <li><b>Seals & Magnetic Systems</b> – Soft lip, hard lip, bubble seals and magnetic closures</li>
-                  <li><b>Sliding Shower Systems</b> – Complete sliding hardware solutions</li>
-                </ul><br>
-
-                <p>
-                  Available in a range of finishes including <b>Bright Chrome, Satin Chrome, Matte Black, Antique Brass, and Natural Aluminium</b>, 
-                  ensuring compatibility with modern residential, hospitality, and commercial projects.
-                </p><br>
-                
-
-
-                <p><b>Browse the Full Schematech Shower Hardware Catalogue:</b></p>
-                <a href="Showers-Catalogue-Including-Sliders.pdf" target="_blank" class="double-glaze-btn">
-                  View Schematech Catalogue (PDF)
-                </a>
-              </div>
-
-
-              <!-- CTA  -->
-              <div class="product-card-cta">
-                <p><b>Northern Hardware &amp; Glass (Pty) Ltd.</b></p>
-                <p>If you would like to request a quote or more information, please contact us.</p>
-                <a href="contact.html" class="contact-us-products-btn">Contact Us</a>
-              </div>
-            </div>
-
-            <!-- RIGHT SECTION -->
-            <div class="product-card-media" aria-label="Shower Hardware photo">
-              <img src="assets/aluminium/hardware.webp" alt="Shower Hardware">
-            </div>
-          </div>
+        <article class="laminated-info-card glass-panel" data-reveal="up">
+          <p class="panel-eyebrow">Typical Benefits</p>
+          <ul class="hero-points laminated-points">
+            <li>Supports safer, more stable installation of glass across multiple applications.</li>
+            <li>Corrosion-resistant and suitable for interior and exterior environments.</li>
+            <li>Available in multiple finishes for architectural consistency.</li>
+            <li>Compatible with modern shower, partition, balustrade, and shopfront systems.</li>
+            <li>Backed by product guidance from experienced sales teams and glazing specialists.</li>
+          </ul>
         </article>
-      </section>
-
-    <section>
-      <section class="product-intro-2">
-        <h2>More About Our Aluminium & Hardware</h2>
-        <p class="product-intro-text">
-          Our aluminium and glass hardware solutions are selected to support the safe, efficient, and professional 
-          installation of glass systems across a wide range of applications. From everyday glazing requirements to 
-          specialised project needs, we supply reliable components that meet industry standards and real-world performance 
-          demands.
-        </p>
-        <p class="product-intro-text">
-          Our prefered supplier of shower hardware is supplied by <b>Schematech</b>, a trusted manufacturer of premium architectural shower hardware. 
-          <b>Schematech</b> products are selected for their precision engineering, durability, and proven performance in frameless and semi-
-          frameless glass installations. This partnership allows us to offer reliable hardware solutions that meet the demands of modern 
-          bathroom design while ensuring long-term stability and safety in wet and high-humidity environments.
-          <br><br>Whether for residential 
-          bathrooms, hospitality projects, or custom installations, our experienced sales teams are available to assist with 
-          product selection, technical guidance, and compatible hardware options to suit your specific glass and design requirements.
-        </p><br>
-        <p class="product-intro-text">
-          For more information on our hardware and aluminium products, please contact one of our sales teams.
-        </p>
-        <a href="contact.html" class="btn btn-cta-solid">
-          <i class="fa-solid fa-location-dot"></i>
-          <span>Locations</span>
-        </a>
-        <a href="contact.html#enquiry" class="btn btn-cta-outline">
-          <i class="fa-solid fa-envelope"></i>
-          <span>Enquiry Form</span>
-        </a>
-      </section>
+      </div>
     </section>
-  </section>
-  </section>
+  </main>
 
-
-
-  <!----------- OTHER PRODUCTS SECTION -------------->
-    <section class="home-products">
-      <section class="product-hero-home">
-        <div class="product-hero-home-inner">
-          <h2 class="section-header-homepage">Other Products in our Range</h2>
-        </div>
-      </section>
-
-      <!-- Wrapper ensures the button aligns with the grid (bottom-left card) -->
-      <section class="home-product-categories">
-        <div class="product-range-block">
-          <div class="product-category-grid-home">
-            <a href="LamGlass.html" class="product-category-card category-glass">
-              <div class="product-category-overlay">
-                <span class="product-category-tag">Category</span>
-                <h3>Laminated Glass Products</h3>
-              </div>
-            </a>
-
-            <a href="ToughGlass.html" class="product-category-card category-architectural">
-              <div class="product-category-overlay">
-                <span class="product-category-tag">Category</span>
-                <h3>Toughened Glass Safety Products</h3>
-              </div>
-            </a>
-
-            <a href="DoubleGlaze.html" class="product-category-card category-interior">
-              <div class="product-category-overlay">
-                <span class="product-category-tag">Category</span>
-                <h3>Double Glazing Units</h3>
-              </div>
-            </a>
-
-            <a href="Special.html" class="product-category-card category-specialised">
-              <div class="product-category-overlay">
-                <span class="product-category-tag">Category</span>
-                <h3>Exclusive Range of Specialised Products</h3>
-              </div>
-            </a>
-
-            <a href="Aluminium.html" class="product-category-card category-aluminium">
-              <div class="product-category-overlay">
-                <span class="product-category-tag">Category</span>
-                <h3>Aluminium & Hardware</h3>
-              </div>
-            </a>
-          </div>
-
-          <a href="products.html" class="btn-prod-home btn-prod-home-primary">
-            View Our Product Range
-          </a>
-        </div>
-      </section>
-    </section>
-</main>
-
-  
-<!------- footer ---------
- ------------------------>   
   <footer class="site-footer">
-    <!-- TOP CTA STRIP -->
     <section class="footer-cta">
       <div class="footer-cta-inner">
-        <h2>Get in Touch</h2>
-        <p>Share your project details and we'll get back to you with options and pricing.</p>
-          <a href="contact.html" class="btn btn-cta-solid">
-            <i class="fa-solid fa-location-dot"></i>
-            <span>Locations</span>
-          </a>
-          <a href="contact.html#enquiry" class="btn btn-cta-outline">
-            <i class="fa-solid fa-envelope"></i>
-            <span>Enquiry Form</span>
-          </a>
+        <p class="footer-cta-kicker">Get in Touch</p>
+        <h2>Talk to our team about your next glass, aluminium, or specialised product requirement.</h2>
+        <p>Share your project details and we will guide you toward the right product, processing option, or branch support.</p>
+        <div class="footer-cta-actions">
+          <a href="contact.html" class="btn btn-cta-solid"><i class="fa-solid fa-location-dot"></i><span>View Locations</span></a>
+          <a href="contact.html#enquiry" class="btn btn-cta-outline"><i class="fa-solid fa-envelope"></i><span>Enquiry Form</span></a>
         </div>
       </div>
     </section>
 
-
-    <!-- MIDDLE FOOTER -->
     <section class="footer-main">
       <div class="footer-main-inner">
-        <!-- Brand / About -->
         <div class="footer-col footer-brand">
-          <!-- you can switch this to a white logo later if you have one -->
-          <div class="footer-logo">
-            <img src="assets/NHG-Logo-hd.webp" alt="Northern Hardware & Glass logo">
-          </div>
-          <p>
-            With decades of experience in glass supply, processing and installation,
-            Northern Hardware &amp; Glass delivers clarity, safety and durability in every pane.
-          </p>
-
+          <div class="footer-logo"><img src="assets/NHG-Logo-HD.jpeg" alt="Northern Hardware &amp; Glass logo" /></div>
+          <p>Northern Hardware &amp; Glass (Pty) Ltd delivers trusted glass supply, processing, and manufacturing solutions with a focus on quality, precision, and dependable service.</p>
           <div class="footer-socials">
-            <a href="https://web.facebook.com/profile.php?id=61587085708063&mibextid=wwXIfr&rdid=TPoWIno0lVODcUVx&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1AD1Rg98R5%2F%3Fmibextid%3DwwXIfr%26_rdc%3D1%26_rdr#" target="_blank" aria-label="Facebook">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/brad-lehman-35506b3ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" aria-label="LinkedIn">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="https://www.instagram.com/northern_hardware_glass?igsh=MTcwcTlveHU0bWswaw%3D%3D" target="_blank" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
+            <a href="https://web.facebook.com/profile.php?id=61587085708063&amp;mibextid=wwXIfr&amp;rdid=TPoWIno0lVODcUVx&amp;share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F1AD1Rg98R5%2F%3Fmibextid%3DwwXIfr%26_rdc%3D1%26_rdr#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/brad-lehman-35506b3ab?utm_source=share&amp;utm_campaign=share_via&amp;utm_content=profile&amp;utm_medium=ios_app" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/northern_hardware_glass?igsh=MTcwcTlveHU0bWswaw%3D%3D" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
           </div>
         </div>
-
-        <!-- Quick Links -->
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="services.html">About Us</a></li>
+            <li><a href="services.html#services-top">About Us</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
@@ -415,43 +247,21 @@
             <li><a href="ToughGlass.html">Toughened Glass Safety Products</a></li>
             <li><a href="DoubleGlaze.html">Double Glazing Units</a></li>
             <li><a href="Special.html">Exclusive Range of Specialised Products</a></li>
-            <li><a href="Aluminium.html">Aluminium & Hardware</a></li>
+            <li><a href="Aluminium.html">Aluminium &amp; Hardware</a></li>
           </ul>
         </div>
-
-        <!-- Contact Info -->
         <div class="footer-col">
           <h4>Contact Info</h4>
           <ul class="footer-contact-list">
             <li><i class="fa-solid fa-phone"></i> <span><a href="tel:0113140365">Tel: 011 314 0365</a></span></li>
-            <li><i class="fa-solid fa-envelope"></i> 
-                <span>Email:</span>
-                <a class="email js-email"
-                  data-email-b64="X832xfftQzoHaRVLM0ktd7nT-fWjjJJbu0"
-                  href="#"
-                  rel="nofollow, noindex"><b>Click Here</b>
-                </a>
-            </li>
-            <li>
-              <i class="fa-solid fa-location-dot"></i>
-              <span>408 Roan Cres, Randjiespark, Midrand, 1685</span>
-            </li>
-            <li>
-              <i class="fa-solid fa-clock"></i>
-              <span>Mon–Fri: 07:30–17:00</span>
-            </li>
+            <li><i class="fa-solid fa-envelope"></i> <span>Email:</span> <a class="email js-email" data-email-b64="X832xfftQzoHaRVLM0ktd7nT-fWjjJJbu0" href="#" rel="nofollow, noindex"><b>Click Here</b></a></li>
+            <li><i class="fa-solid fa-location-dot"></i> <span>408 Roan Cres, Randjiespark, Midrand, 1685</span></li>
+            <li><i class="fa-solid fa-clock"></i> <span>Mon-Fri: 07:30-17:00</span></li>
           </ul>
         </div>
       </div>
     </section>
-
-    <!-- BOTTOM COPYRIGHT STRIP -->
-    <div class="footer-bottom">
-      <div class="footer-bottom-inner">
-        <p>© <span id="year-footer"></span> Northern Hardware &amp; Glass (Pty) Ltd. All rights reserved.</p>
-      </div>
-    </div>
+    <div class="footer-bottom"><div class="footer-bottom-inner"><p>&copy; <span id="year-footer"></span> Northern Hardware &amp; Glass (Pty) Ltd. All rights reserved.</p></div></div>
   </footer>
 </body>
 </html>
-

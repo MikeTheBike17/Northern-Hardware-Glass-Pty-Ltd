@@ -9430,6 +9430,12 @@ body.products-page.special-page .laminated-hero-bg {
     url("images/Special-Wallpaper.jpeg") center/cover no-repeat;
 }
 
+body.products-page.aluminium-page .laminated-hero-bg {
+  background:
+    linear-gradient(135deg, rgba(23, 47, 84, 0.18), rgba(7, 13, 22, 0.58)),
+    url("images/aluminium-background.jpg") center/cover no-repeat;
+}
+
 body.products-page.product-detail-page .special-detail-inline-media {
   margin-top: 1.15rem;
   border-radius: 24px;
