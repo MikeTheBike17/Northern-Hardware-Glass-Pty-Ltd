@@ -11465,3 +11465,21 @@ body.contact-page-view .form-feedback {
   }
 }
 
+@media (max-width: 720px) {
+  .hero-header-contact,
+  .top-bar-left,
+  .top-bar-center {
+    display: none !important;
+  }
+
+  .hero-header-actions {
+    grid-column: 3;
+    justify-self: end;
+    align-self: start;
+  }
+
+  .top-bar-inner {
+    justify-content: center;
+  }
+}
+
