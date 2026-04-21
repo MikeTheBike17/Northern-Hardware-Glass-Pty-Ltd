@@ -12,32 +12,20 @@ document.addEventListener("DOMContentLoaded", () => {
   if (footerYear) footerYear.textContent = new Date().getFullYear();
 
   /* ------------------------------
-     NAV DROPDOWNS (MOBILE: TAP ONCE OPENS, TAP AGAIN GOES)
-     Desktop remains hover-based via CSS.
+     NAV MENU
   ------------------------------ */
   const MOBILE_BREAKPOINT = 900;
   const HERO_MOBILE_BREAKPOINT = 720;
   const isMobile = () => window.innerWidth <= MOBILE_BREAKPOINT;
   const isHeroMobile = () => window.innerWidth <= HERO_MOBILE_BREAKPOINT;
 
-  const submenuItems = Array.from(document.querySelectorAll("li.has-submenu"));
   const navToggle = document.getElementById("navToggle");
   const siteHeader = document.querySelector(".site-header");
   const siteMenu = document.getElementById("siteMenu");
   const isServicesPage = document.body.classList.contains("services-page");
   const isLaminatedPage = document.body.classList.contains("laminated-page");
-  const useFlatDropdownNav = siteMenu?.dataset.flatNav === "true";
   const HEADER_MENU_TRANSITION_MS = 280;
   let headerMenuCloseTimer = null;
-
-  function closeAllSubmenus() {
-    submenuItems.forEach((li) => {
-      li.classList.remove("open");
-      const a = li.querySelector("a.nav-main-link");
-      if (a) a.setAttribute("aria-expanded", "false");
-      li.dataset.tapOpen = "0";
-    });
-  }
 
   function closeHeaderMenu() {
     if (!siteHeader || !navToggle) return;
@@ -77,83 +65,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Mobile: first tap opens submenu, second tap follows link
-  submenuItems.forEach((li) => {
-    const link = li.querySelector("a.nav-main-link");
-    if (!link) return;
-
-    li.dataset.tapOpen = "0";
-
-    link.addEventListener("click", (e) => {
-      if (useFlatDropdownNav) return;
-      if (!isMobile()) return; 
-
-      const isOpen = li.classList.contains("open");
-      const wasTappedOpen = li.dataset.tapOpen === "1";
-
-      // If closed: open it and stop navigation
-      if (!isOpen) {
-        e.preventDefault();
-
-        closeAllSubmenus();
-        li.classList.add("open");
-        link.setAttribute("aria-expanded", "true");
-        li.dataset.tapOpen = "1";
-        return;
-      }
-
-      // If open but this tap wasn't the "second tap" yet: keep open and allow next tap to navigate
-      if (isOpen && !wasTappedOpen) {
-        e.preventDefault();
-        li.dataset.tapOpen = "1";
-        return;
-      }
-
-      // Second tap while open -> allow navigation to page
-    });
-  });
-
   document.querySelectorAll(".navbar a").forEach((link) => {
-    link.addEventListener("click", () => {
-      if (useFlatDropdownNav && link.classList.contains("nav-main-link")) {
-        closeHeaderMenu();
-        closeAllSubmenus();
-        return;
-      }
-      const parentDropdown = link.closest("li.has-submenu");
-      if (parentDropdown && link.classList.contains("nav-main-link")) return;
-      closeHeaderMenu();
-      closeAllSubmenus();
-    });
-  });
-
-  // Mobile: tap outside closes
-  document.addEventListener("click", (e) => {
-    if (!isMobile()) return;
-    if (!e.target.closest(".nav-links")) closeAllSubmenus();
+    link.addEventListener("click", closeHeaderMenu);
   });
 
   document.addEventListener("click", (e) => {
     if (!siteHeader || !siteMenu || !navToggle) return;
     if (!e.target.closest(".site-header")) {
       closeHeaderMenu();
-      closeAllSubmenus();
     }
   });
 
-  // Close when resizing up to desktop
   window.addEventListener("resize", () => {
-    if (!isMobile()) closeAllSubmenus();
-  });
-
-  window.addEventListener("resize", () => {
-    if (window.innerWidth > 900) closeAllSubmenus();
+    if (!isMobile()) closeHeaderMenu();
   });
 
   document.addEventListener("keydown", (e) => {
     if (e.key === "Escape") {
       closeHeaderMenu();
-      closeAllSubmenus();
     }
   });
 
@@ -630,12 +559,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       setActiveTabState(button);
-
-      button.scrollIntoView({
-        behavior: immediate ? "auto" : "smooth",
-        block: "nearest",
-        inline: "nearest",
-      });
 
       syncWhyBridge(button);
 
@@ -1135,17 +1058,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ------------------------------
-     SMOOTH SCROLL FOR ANCHOR LINKS
+     HOME SMOOTH SCROLL FOR ANCHOR LINKS
   ------------------------------ */
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener("click", function (e) {
-      const href = this.getAttribute("href");
-      const target = href ? document.querySelector(href) : null;
+  if (homePage) {
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener("click", function (e) {
+        const href = this.getAttribute("href");
+        const target = href ? document.querySelector(href) : null;
 
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: "smooth" });
-      }
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: "smooth" });
+        }
+      });
     });
-  });
+  }
 });
