@@ -254,6 +254,14 @@ main {
   position: relative;
 }
 
+.navbar .nav-links ul,
+.navbar .nav-links .submenu,
+.navbar .nav-links .sub-menu,
+.navbar .nav-links .dropdown-menu,
+.navbar .nav-links .nav-submenu {
+  display: none !important;
+}
+
 /* Pill links */
 .nav-main-link {
   font-weight: 600;
