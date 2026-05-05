@@ -1003,7 +1003,17 @@ document.addEventListener("DOMContentLoaded", () => {
   ------------------------------ */
   (function () {
     const EMAIL_MAP = {
-      
+      "X832xfftQzoHaRVLM0ktd7nT-fWjjJJbu0": "brad@nhg.za.net",
+      "CECWOkme4jW2wADejCisU1JMauVsEIJyufE": "warren@nhg.co.za",
+      "TN1AoO0P1sJdC5Oitn4rUYOmyRkGLSf0XNMP": "marinda@nhg.co.za",
+      "CD4GeThCSxXOmKDdJRbhRtrLIYhZve3MnYc": "sales@nhg.za.net",
+      "1etLEZANDecHXN-EFWsZX5Z0yHcGvUe9": "pbg@nhg.za.net",
+      "LZyDaHUE52hXo4aE_GaxvEiU4CgyV2deaRok": "sunette@nhg.co.za",
+      "B6JJUiB4dx-608rFq6likD5DEQ1u6hxEeupH4s8": "janefurse@nhg.co.za",
+      "rixmHoBn0TlXSN7KL7HJvwRaTJifGfNg": "ltt@nhg.za.net",
+      "H-VTO5WP15WPD_PNnbnFW-2pN_APQwqOS6Xh7g": "mankweng@nhg.co.za",
+      "QjkA-YME3oiCRUCu_NypbdcB1lm0uvd_rhs": "sibasa@nhg.co.za",
+      "uoYkB2AToYg4Fuk7SOGP_5swAdwvpUINZSM": "kwagga@nhg.co.za",
     };
 
     document.querySelectorAll("a.js-email").forEach((a) => {
@@ -1041,7 +1051,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Optional: remove query params from URL after showing
     if (params.get("success") || params.get("error")) {
-      window.history.replaceState({}, document.title, window.location.pathname);
+      window.history.replaceState(
+        {},
+        document.title,
+        window.location.pathname + window.location.hash
+      );
     }
   })();
 

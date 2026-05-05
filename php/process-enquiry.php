@@ -26,8 +26,8 @@ const FROM_EMAIL = 'brad@nhg.za.net';
 const FROM_NAME  = 'Northern Hardware & Glass Website';
 
 // Redirect back to the SAME page with query params (no separate thank-you page)
-const SUCCESS_REDIRECT = 'contact.html?success=1';
-const ERROR_REDIRECT   = 'contact.html?error=1';
+const SUCCESS_REDIRECT = '../contact.html?success=1#enquiry';
+const ERROR_REDIRECT   = '../contact.html?error=1#enquiry';
 
 // Map branch names (from your <select>) to destination emails:
 $BRANCH_EMAILS = [
@@ -118,7 +118,6 @@ $phone   = clean_line(post('phone'));
 $branch  = clean_line(post('branch'));
 $subject = clean_line(post('subject'));
 $message = trim(post('message'));
-$optIn   = post('marketing_opt_in') === 'yes' ? 'Yes' : 'No';
 
 if ($name === '' || $email === '' || $branch === '' || $message === '') {
   redirect(ERROR_REDIRECT);
@@ -151,7 +150,6 @@ $bodyLines = [
   "Name: {$name}",
   "Email: {$email}",
   "Phone: {$phone}",
-  "Marketing opt-in: {$optIn}",
   "",
   "Message:",
   $message,
