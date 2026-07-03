@@ -83,9 +83,17 @@
               <li class="nav-item">
                 <a class="nav-main-link" href="terms.html">TERMS</a>
               </li>
-
-              <li class="nav-item">
-                <a class="nav-main-link" href="products.html">PRODUCTS</a>
+              <li class="nav-item nav-products-item" data-products-nav-item>
+                <a class="nav-main-link nav-products-toggle" href="products.html" aria-expanded="false" aria-controls="productsNavCategories" data-products-nav-toggle>
+                  <span>PRODUCTS</span>
+                </a>
+                <ul class="nav-products-submenu" id="productsNavCategories" aria-label="Product categories" aria-hidden="true">
+                  <li><a href="LamGlass.html">Laminated Glass Products</a></li>
+                  <li><a href="ToughGlass.html">Toughened Glass Safety Products</a></li>
+                  <li><a href="DoubleGlaze.html">Double Glazing Units</a></li>
+                  <li><a href="Special.html">Exclusive Range of Specialised Products</a></li>
+                  <li><a href="Aluminium.html">Aluminium &amp; Hardware</a></li>
+                </ul>
               </li>
 
               <li class="nav-item">
@@ -120,6 +128,7 @@
               Northern Hardware &amp; Glass is Proudly Established as one of the leaders in the Glass Industry in South Africa, we have expanded our business to include 12 branches specializing in Retail, Wholesale and Manufacturing. We pride ourselves in delivering glass products of outstanding quality and of the highest standard to our customers. From frameless showers to shopfronts and safety glass, we deliver clarity, safety and durability.
             </p>
               <div class="hero-actions">
+                <a href="index.html#Gallery" class="btn btn-primary">Product Gallery </a>
                 <a href="products.html" class="btn btn-primary">Explore Product Range</a>
               </div>
             </div>
@@ -254,55 +263,6 @@
       </div>
     </section>
 
-    <section class="home-section product-range-section">
-      <div class="home-container">
-        <div class="section-heading section-heading-split" data-reveal="up">
-          <div>
-            <p class="section-kicker">Product Range</p>
-            <h2>Engineered glass categories presented with greater clarity and consistency.</h2>
-          </div>
-          <a href="products.html" class="btn btn-primary">View Full Product Range</a>
-        </div>
-
-        <div class="product-category-grid-home">
-          <a href="LamGlass.html" class="product-category-card category-glass" data-reveal="card">
-            <div class="product-category-overlay">
-              <span class="product-category-tag">Category</span>
-              <h3>Laminated Glass Products</h3>
-            </div>
-          </a>
-
-          <a href="ToughGlass.html" class="product-category-card category-architectural" data-reveal="card">
-            <div class="product-category-overlay">
-              <span class="product-category-tag">Category</span>
-              <h3>Toughened Glass Safety Products</h3>
-            </div>
-          </a>
-
-          <a href="DoubleGlaze.html" class="product-category-card category-interior" data-reveal="card">
-            <div class="product-category-overlay">
-              <span class="product-category-tag">Category</span>
-              <h3>Double Glazing Units</h3>
-            </div>
-          </a>
-
-          <a href="Special.html" class="product-category-card category-specialised" data-reveal="card">
-            <div class="product-category-overlay">
-              <span class="product-category-tag">Category</span>
-              <h3>Exclusive Range of Specialised Products</h3>
-            </div>
-          </a>
-
-          <a href="Aluminium.html" class="product-category-card category-aluminium" data-reveal="card">
-            <div class="product-category-overlay">
-              <span class="product-category-tag">Category</span>
-              <h3>Aluminium &amp; Hardware</h3>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
     <section class="home-section gallery-section" id="Gallery">
       <div class="home-container">
         <div class="section-heading section-heading-split" data-reveal="up">
@@ -421,9 +381,6 @@
             <img src="assets/gallery/Gallery33.webp" alt="Northern Hardware and Glass gallery image 33" loading="lazy">
           </button>
           <button class="gallery-item" type="button" data-reveal="card">
-            <img src="assets/gallery/Gallery34.webp" alt="Northern Hardware and Glass gallery image 34" loading="lazy">
-          </button>
-          <button class="gallery-item" type="button" data-reveal="card">
             <img src="assets/gallery/Gallery36.webp" alt="Northern Hardware and Glass gallery image 36" loading="lazy">
           </button>
           <button class="gallery-item" type="button" data-reveal="card">
@@ -451,6 +408,56 @@
         <button class="lightbox-nav next" type="button" aria-label="Next image">&#10095;</button>
       </div>
     </div>
+
+    <section class="home-section product-range-section">
+      <div class="home-container">
+        <div class="section-heading section-heading-split" data-reveal="up">
+          <div>
+            <p class="section-kicker">Product Range</p>
+            <h2>Engineered glass categories presented with greater clarity and consistency.</h2>
+          </div>
+          <a href="products.html" class="btn btn-primary">View Full Product Range</a>
+        </div>
+
+        <div class="product-category-grid-home">
+          <a href="LamGlass.html" class="product-category-card category-glass" data-reveal="card">
+            <div class="product-category-overlay">
+              <span class="product-category-tag">Category</span>
+              <h3>Laminated Glass Products</h3>
+            </div>
+          </a>
+
+          <a href="ToughGlass.html" class="product-category-card category-architectural" data-reveal="card">
+            <div class="product-category-overlay">
+              <span class="product-category-tag">Category</span>
+              <h3>Toughened Glass Safety Products</h3>
+            </div>
+          </a>
+
+          <a href="DoubleGlaze.html" class="product-category-card category-interior" data-reveal="card">
+            <div class="product-category-overlay">
+              <span class="product-category-tag">Category</span>
+              <h3>Double Glazing Units</h3>
+            </div>
+          </a>
+
+          <a href="Special.html" class="product-category-card category-specialised" data-reveal="card">
+            <div class="product-category-overlay">
+              <span class="product-category-tag">Category</span>
+              <h3>Exclusive Range of Specialised Products</h3>
+            </div>
+          </a>
+
+          <a href="Aluminium.html" class="product-category-card category-aluminium" data-reveal="card">
+            <div class="product-category-overlay">
+              <span class="product-category-tag">Category</span>
+              <h3>Aluminium &amp; Hardware</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
 
     <section class="home-section socials-section" id="socials">
       <div class="home-container">

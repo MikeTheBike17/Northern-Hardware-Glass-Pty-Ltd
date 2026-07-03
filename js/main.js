@@ -22,10 +22,55 @@ document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.getElementById("navToggle");
   const siteHeader = document.querySelector(".site-header");
   const siteMenu = document.getElementById("siteMenu");
+  const productsNavItem = document.querySelector("[data-products-nav-item]");
+  const productsNavToggle = document.querySelector("[data-products-nav-toggle]");
+  const productsNavSubmenu = document.getElementById("productsNavCategories");
+  const productsNavCategoryLinks = productsNavSubmenu ? Array.from(productsNavSubmenu.querySelectorAll("a")) : [];
   const isServicesPage = document.body.classList.contains("services-page");
   const isLaminatedPage = document.body.classList.contains("laminated-page");
   const HEADER_MENU_TRANSITION_MS = 280;
   let headerMenuCloseTimer = null;
+
+  function setProductsSubmenuOpen(isOpen) {
+    if (!productsNavItem || !productsNavToggle) return;
+    productsNavItem.classList.toggle("is-expanded", isOpen);
+    productsNavToggle.setAttribute("aria-expanded", String(isOpen));
+    if (productsNavSubmenu) {
+      productsNavSubmenu.setAttribute("aria-hidden", String(!isOpen));
+    }
+    productsNavCategoryLinks.forEach((link) => {
+      if (isOpen) {
+        link.removeAttribute("tabindex");
+      } else {
+        link.setAttribute("tabindex", "-1");
+      }
+    });
+  }
+
+  function closeProductsSubmenu() {
+    setProductsSubmenuOpen(false);
+  }
+
+  function shouldUseProductsDisclosure() {
+    return Boolean(isHeroMobile() && siteHeader && siteHeader.classList.contains("menu-open"));
+  }
+
+  function shouldUseProductsHoverDisclosure() {
+    return Boolean(!isHeroMobile() && productsNavItem && productsNavToggle);
+  }
+
+  function openProductsSubmenuForDesktop() {
+    if (shouldUseProductsHoverDisclosure()) setProductsSubmenuOpen(true);
+  }
+
+  function closeProductsSubmenuForDesktop(event) {
+    if (!shouldUseProductsHoverDisclosure()) return;
+    const nextTarget = event ? event.relatedTarget : null;
+    if (nextTarget instanceof Node && productsNavItem.contains(nextTarget)) return;
+    closeProductsSubmenu();
+  }
+
+  closeProductsSubmenu();
 
   function closeHeaderMenu() {
     if (!siteHeader || !navToggle) return;
@@ -33,6 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
       window.clearTimeout(headerMenuCloseTimer);
       headerMenuCloseTimer = null;
     }
+    closeProductsSubmenu();
     document.body.classList.remove("nav-open");
     siteHeader.classList.remove("nav-open");
     siteHeader.classList.remove("menu-open");
@@ -66,8 +112,26 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   document.querySelectorAll(".navbar a").forEach((link) => {
-    link.addEventListener("click", closeHeaderMenu);
+    link.addEventListener("click", (event) => {
+      if (productsNavItem && productsNavToggle && link === productsNavToggle && shouldUseProductsDisclosure()) {
+        const isProductsSubmenuOpen = productsNavItem.classList.contains("is-expanded");
+        if (!isProductsSubmenuOpen) {
+          event.preventDefault();
+          setProductsSubmenuOpen(true);
+          return;
+        }
+      }
+
+      closeHeaderMenu();
+    });
   });
+
+  if (productsNavItem) {
+    productsNavItem.addEventListener("mouseenter", openProductsSubmenuForDesktop);
+    productsNavItem.addEventListener("mouseleave", closeProductsSubmenuForDesktop);
+    productsNavItem.addEventListener("focusin", openProductsSubmenuForDesktop);
+    productsNavItem.addEventListener("focusout", closeProductsSubmenuForDesktop);
+  }
 
   document.addEventListener("click", (e) => {
     if (!siteHeader || !siteMenu || !navToggle) return;
@@ -77,6 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   window.addEventListener("resize", () => {
+    if (!isHeroMobile()) closeProductsSubmenu();
     if (!isMobile()) closeHeaderMenu();
   });
 
